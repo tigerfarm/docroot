@@ -3,87 +3,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>TFP:Tech</title>
-        <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <link href="../styles.css" rel="stylesheet" type="text/css"/>
-        <script src="../page.js"></script>
-
-        <style type="text/css">
-            /* Tech menu icon */
-            .tmenuicon {
-                display: inline-block;
-                cursor: pointer;
-                padding: 12px 12px 0px 0px;
-            }
-            /* ----------------*/
-            .tmenuDropdown {
-                position: relative;
-                display: inline-block;
-            }
-            .tmenuDropdownList {
-                display: none;
-                position: absolute;
-                background-color: #f1f1f1;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-                border: 2px solid;
-            }
-            .tmenuDropdownList a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-            .tmenuDropdownList a:hover {background-color: #ddd}
-            .tshow {display:block;} 
-        </style>
-        <script type="text/javascript">
-            // -----------------------------------------------------------------
-            // Tech menu icon
-            var ttheBar = 0;
-            function tmenuicon() {
-                // logger("+ Clicked menuicon");
-                document.getElementById("tmenuDropdownItems").classList.toggle("tshow");
-            }
-            function tmenubar() {
-                ttheBar = 1;
-                // logger("+ Clicked menubar");
-            }
-            window.onclick = function (e) {
-                if (!e.target.matches('.tmenuicon') && !e.target.matches('.tmenubar')) {
-                    if (ttheBar === 0) {
-                        // logger("+ Clicked window");
-                        var dropdowns = document.getElementsByClassName("tmenuDropdownList");
-                        for (var d = 0; d < dropdowns.length; d++) {
-                            var openDropdown = dropdowns[d];
-                            if (openDropdown.classList.contains('tshow')) {
-                                openDropdown.classList.remove('tshow');
-                            }
-                        }
-                    }
-                }
-                ttheBar = 0;
-            }
-        </script>
-        <script type="text/javascript">
-            // Logger
-            function logger(message) {
-                var aTextarea = document.getElementById('log');
-                aTextarea.value += "\n> " + message;
-                aTextarea.scrollTop = aTextarea.scrollHeight;
-            }
-            function clearLog() {
-                log.value = "+ Ready";
-            }
-            window.onload = function () {
-                log.value = "+++ Start.";
-            };
-        </script>
-
+        <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="/styles.css" rel="stylesheet" type="text/css"/>
+        <script src="/page.js"></script>
     </head>
     <body>
         <div id="thePage">
-            <script type="text/javascript" src="../pageTop.js"></script>
+            <script type="text/javascript" src="/pageTop.js"></script>
+            <script type="text/javascript" src="/loggerPanel.js"></script>
             <div id="content">
                 <div style="float: left;">
                     <div>
@@ -94,7 +21,7 @@
                         </div>
                         <div class="pmenuDropdown">
                             <div id="pmenuDropdownItems" class="pmenuDropdownList">
-                                <a href="/tech/web/map/index.html">JS Map</a>
+                                <a href="/booksWeb/map/index.html">JS Map</a>
                                 <a href="#">abc</a>
                                 <a href="#">def</a>
                                 <a href="#">ghi</a>
@@ -113,7 +40,7 @@
                     Here is what it looks like:
                 </p>
                 <a target="TfpTab" href="https://github.com/tigerfarm/OwlClient">
-                    <img class="tfpPhoto" src="https://raw.githubusercontent.com/tigerfarm/OwlClient/master/Owl_Client.jpg" alt="Twilio Client" width="380" />
+                    <img class="tfpPhoto" src="https://raw.githubusercontent.com/tigerfarm/OwlClient/master/Tiger_Voice_Client.jpg" alt="Twilio Client" width="380" />
                 </a>
                 <p class="pI">I use their SIP Domain product to manage my home phone number.
                     Yes, I have a landline and an analog wireless home phone.
@@ -142,23 +69,8 @@
                     <a target="TfpTab" href="https://github.com/tigerfarm?tab=repositories">GitHub Repositories</a>.
                 </p>
 
-                <div id="logBox">
-                    <div class="panelTitle">
-                        Log messages for developers
-                    </div>
-                    <div class="panelArea">
-                        <textarea id="log"></textarea>
-                    </div>
-                    <div class="panelArea">
-                        <table>
-                            <tr>
-                                <td><button id="clearLog" onclick="clearLog();">Clear</button></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
             </div>
-            <script type="text/javascript" src="../pageBottom.js"></script>
+            <script type="text/javascript" src="/pageBottom.js"></script>
         </div>
     </body>
 </html>

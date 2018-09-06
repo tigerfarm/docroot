@@ -21,7 +21,7 @@ body,th,td,p,div,span,a,input,select,textarea,li,notelist{
     position:fixed;
     width: 900px;
     height: 86px;
-    margin: 0 0 0 0px;
+    margin: 0 0 3px 0px;
     padding: 0px 0px 0px 0px;
     border-bottom: 2px solid black;
 }

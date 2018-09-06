@@ -3,12 +3,12 @@ Company web site CSS style sheet.
 Created by Stacy Thurston Sept.29,2012
 */
 
-/* Text elements */
+/* Text elements
 body,th,td,p,div,span,a,input,select,textarea,li,notelist{
     font-family:Arial, Helvetica, FreeSans, "Luxi-sans", "Nimbus Sans L", sans-serif;
     font-size:0.95em
 }
-
+ */
 /* Links
 a:visited,a:visited code{color:#2B00F4}
 a:link{color:#2B00F4}
