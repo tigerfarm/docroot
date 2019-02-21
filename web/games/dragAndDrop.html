@@ -5,8 +5,12 @@
         <!-- from: http://www.w3schools.com/html/html5_draganddrop.asp
         I'm testing the addition of getting this to work for touch screens.
         -->
+        <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="/styles.css" rel="stylesheet" type="text/css"/>
+        <script src="/page.js"></script>
+
         <style>
-            #div1 {width:100px;height:70px;padding:10px;border:3px solid #C9731F;}
+            #div1 {width:90px;height:60px;padding:10px;border:3px solid #C9731F;}
         </style>
         <script>
             function setup(ev) {
@@ -44,11 +48,23 @@
         </script>
     </head>
     <body>
-        <p>Drag and drop the image into the rectangle:</p>
-        <div style="height:100px;border: solid white;">
-            <img id="drag1" src="Firefox.jpg" alt='image' draggable="true" ondragstart="drag(event)" width="55" height="59">
+        <div id="thePage">
+            <script type="text/javascript" src="/pageTop.js"></script>
+            <div class="main">
+                <div class="content">
+                    <h1 class="title">Drag and Drop into the rectangle</h1>
+
+                    <div style="height:100px;border: solid white;">
+                        <img id="drag1" src="Firefox.jpg" alt='image' draggable="true" ondragstart="drag(event)" width="55" height="59">
+                    </div>
+                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                    <div class="footer" style='margin-top: 60px'>
+                        <script type="text/javascript" src="/pageBottom.js"></script>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </body>
 </html>
 

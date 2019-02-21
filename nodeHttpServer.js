@@ -10,7 +10,7 @@ var makeRequest = require('request');
 var http = require("http");
 var url = require("url");
 var path = require("path");
-var port = process.argv[2] || 8000;
+var port = process.argv[2] || 8080;
 var fs = require("fs");
 
 tokenHost = process.env.TOKEN_HOST;

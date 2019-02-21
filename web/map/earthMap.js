@@ -10,8 +10,8 @@ var imgArrayWidth = 15;  // Number of images across the world, there are 10x10
 var imgArrayHeight = 16;  // Number of images across the world, there are 10x10
 var tileImgWidth = 247-1;
 var tileImgHeight = 116-1;
-var tileImgPrefixMapGeo = '../JavaScriptMap/images/WorldMap_';
-var tileImgPrefixMapPolitical = '../JavaScriptMap/imagesP/WorldMap_';
+var tileImgPrefixMapGeo = 'images/WorldMap_';
+var tileImgPrefixMapPolitical = 'imagesP/WorldMap_';
 var tileImgPrefix = tileImgPrefixMapGeo;
 
 var tileImgPostfix = '.jpg';
