@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Persuasion</title>
+        <link href="../images/favicontfp.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="../styles.css" rel="stylesheet" type="text/css"/>
+        <link href="../jqStyles.css" rel="stylesheet" type="text/css"/>
+        <!-- Note, script order is important! -->
+        <script src="../js/jquery310.js" type="text/javascript"></script>
+        <script src="../js/jqueryTFP.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            $(document).ready(function(){
+                $("#tabs li").click(function() {
+                    //	First remove class "active" from currently active tab
+                    $("#tabs li").removeClass('active');
+                    //	Now add class "active" to the selected/clicked tab
+                    $(this).addClass("active");
+                    //	Hide all tab content
+                    $(".tab_content").hide();
+                    //	Here we get the href value of the selected tab
+                    var selected_tab = $(this).find("a").attr("href");
+                    //	Show the selected tab content
+                    $(selected_tab).fadeIn();
+                    //	At the end, we add return false so that the click on the link is not executed
+                    return false;
+                });
+            });
+            /* ]]> */
+        </script>
+    </head>
+    <body>
+        <div id="outerBorder">
+            <script type="text/javascript" src="../pageTop.js"></script>
+            <div class="main">
+                <div class="leftSidebar">
+                    <script type="text/javascript" src="leftMenu.js"></script>
+                </div>
+                <div class="contentLong">
+                    <h2 style="color:#4B5F6A;">Persuasion</h2>
+
+                    <div id="tabs_wrapper">
+                        <div id="tabs_container">
+                            <ul id="tabs">
+                                <li class="active"><a href="#Cover" style="color:#4B5F6A;">Cover</a></li>
+                                <li><a href="#download" style="color:#4B5F6A;">Download</a></li>
+                                <li><a href="#storyLines" style="color:green;">Lines</a></li>
+                                <li><a href="#Introduction" style="color:#4B5F6A;">Introduction</a></li>
+                                <li><a href="#Samples1" style="color:#4B5F6A;">Chapter 1</a></li>
+                                <li><a href="#Samples2" style="color:#4B5F6A;">Chapter 2</a></li>
+                            </ul>
+                        </div>
+                        <div id="tabs_content_container">
+                            <div id="Cover" class="tab_content" style="display:block;">
+                                <div class="eReaderHTMLcover">
+                                    <table>
+                                        <td><img src="../images/persuasionCover.jpg" title="Persuasion cover page" /></td>
+                                        <td style="vertical-align:top;"><p>by,</p><p>Jane Austen</p></td>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="download" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <p class="noindent">Complete sample book.</p>
+                                    <p class="noindent"><a href="../books/download/Persuasion.epub" title="Download requires an ereader to read the ebook.">[EPUB]</a> download for an ereader.</p>
+                                    <p class="noindent"><a href="../books/download/Persuasion.mobi" title="For Kindle ereaders.">[MOBI]</a> download for the Kindle ereader.</p>
+                                    <p class="copyright">
+                                        An example for you to download, examine, and read,
+                                        using various <a href="eReaders.html">ereaders</a>.
+                                    </p>
+                                    <h1 class="bookTitle" style="color:#4B5F6A;">____________</h1>
+                                    <p class="linespacing">&#160;</p>
+                                    <p class="copyright">Published by Tiger Farm Press, October, 2012.</p>
+                                    <p class="copyright">Public Domain Book.</p>
+                                    <p class="copyright"><em>Persuasion</em> was first published in 1818.</p>
+                                    <p class="linespacing">&#160;</p>
+                                    <p class="centerLines">TIGER FARM PRESS&#160;&#160;&#160;<img src="images/publisher.jpg" alt="Publisher"></img>&#160;&#160;&#160;CALIFORNIA</p>
+                                </div>
+                            </div>
+                            <div id="storyLines" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h1 class="chapterTitle" style="color:#4B5F6A;">Story Lines</h1>
+                                    <p class="pBookSmallNoIndent">Anne Elliot, with all her claims of birth, beauty, and mind,
+                                        to throw herself away at nineteen; involve herself in an engagement with a young man, 
+                                        who had nothing but himself to recommend him...</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">Henrietta and Louisa, young ladies of nineteen and twenty,
+                                        who had brought from school at Exeter all the usual stock
+                                        of accomplishments.</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">Captain Wentworth had distinguished himself, and early
+                                        gained the other step in rank, and must now, by successive
+                                        captures, have made a handsome fortune.</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">...valuables from all the distant countries Captain Harville
+                                        had visited, were more than amusing to Anne;</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">Lady Russell as a woman of the greatest influence with
+                                        everybody! I always look upon her as able to persuade a
+                                        person to anything!</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">Anne found Captain Benwick again drawing near her.
+                                        Lord Byron's “dark blue seas” could not fail of being
+                                        brought forward by their present view.</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">Anne, at 28: hoping that she was to be blessed with a
+                                        second spring of youth and beauty.</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">Admiral Croft: One man's ways may be as good as
+                                        another's, but we all like our own best.</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">
+                                        Anne smiled and said, &#8220;My idea of good company, Mr
+                                        Elliot, is the company of clever, well-informed people,
+                                        who have a great deal of conversation.&#8221;</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">If she could only have a few minutes conversation with
+                                        him again,</p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">No one can withstand the charm of such a mystery.</p>
+                                    <hr style="width:50%"/>
+                                </div>
+                            </div>
+                            <div id="Introduction" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <p class="pBookSmallNoIndent">Jane Austen is the author of classic romantic books. For almost two-hundred years, her novels have been continuously in print. At only twenty years old, she wrote her first <i>first draft</i> of a romantic novel titled <i>First Impressions</i>. With major revisions this <i>first</i> became her most famous book, <i>Pride and Prejudice</i>. In learning her craft, she wrote a play, poems, and short stories. Jane&#8217;s novels center around young women and interesting handsome men in various social situations in South England where she lived. At times she showed an interest in men in uniform: in <i>Pride and Prejudice</i> it was men in the militia, in <i>Persuasion</i> it was men in the navy. She wrote from experience, she had a brother in the militia, and two brothers served in the Royal Navy.
+                                    </p>
+                                    <p class="pBookSmall"><em>Persuasion</em> is a novel of interesting characters set in an interesting storyline with unexpected turns. However Jane&#8217;s writing circumstances were not the best, she finished writing <i>Persuasion</i> in 1816, within months of her death. It was the last novel she would finish. In her last year and a half of life, she was ill, possibly with a form of tuberculosis. She died at forty-one.
+                                    </p>
+                                    <p class="pBookSmall">In <em>Persuasion</em> there are scenes that are only brief passages, sometimes only a paragraph long. In her earlier books, <i>Pride and Prejudice</i> and <i>Sense and Sensibility</i>, the stories were fuller, characters further developed, stories complete in every way. Even the writing syntax was different. Was this a view into her writing style? Did she write her stories in brief and the fill them in during a later draft? It helps to read <i>Persuasion</i> with this in mind, and to forgive the brevity of some scenes and focus on the characters and the overall story which is as good as any.
+                                    </p>
+                                    <p class="pBookSmall"><em>Persuasion</em> opens with an introduction to the family line of Sir Walter Elliot who has three daughters of very different dispositions. Elizabeth is the strong noble woman who, since her mother&#8217;s death, has been the mistress of Kellynch Hall, the family&#8217;s countryside mansion. Mary is a high maintenance woman with children, the wife of Charles Musgrove, heir to Uppercross. And then there is Anne, the story&#8217;s leading lady, the dependable capable sister.
+                                    </p>
+                                    <p class="pBookSmall">At nineteen Anne Elliot had met Frederick Wentworth, a navy man, a man whom she had come to love. But he was an inferior match for her because she was a woman of position, a daughter of fortune and estate; he was not, he had only the dreams of a confident young man. A friend of the family, Lady Russel persuaded Anne to end her relationship, a decision Anne would regret for years to come.
+                                    </p>
+                                    <p class="pBookSmall">As the story begins, at twenty-eight, Anne is still single and living under the wing of her father and older sister who set the tone for the environment of her day to day life: where she stays, where she goes, who she spends time with. This limits her chances to grow and develop. However, circumstances are about to change. Like many modern families, the leaders of the Elliot family have been spending beyond their means. With the persuasive skills of Lady Russel, and the common sense of Anne, prudence is proposed: the family is to rent out their current residence and move, thus putting life changes into motion.
+                                    </p>
+                                    <p class="pBookSmall">Sir Elliot and his eldest daughter leave Kellynch for a smaller house far away, some fifty miles away. Anne moves a short distance to Uppercross Cottage as to help her sister, as her sister requested. Split off from the influence of that overbearing pair and Lady Russel, Anne finds new supportive friends, and associates. This new circle includes naval officers who are interesting because of their exposure to the social advantages of travel. One of the officers is her old boyfriend, who is now a Captain with fortune. As well as having new men in Anne&#8217;s social circle, there are women. In particular, her sisters-in-law,  Henrietta and Louisa Musgrove, nineteen and twenty, pretty, fashionable, educated ladies, nine and eight years Anne&#8217;s junior. They are in the bloom of young life and see Anne as an older competitor for the men of wealth in search of a wife. It is amusing to watch the interactions between the ladies when in the company of men, and to listen to their comments on men, and their suspected intentions of men.
+                                    </p>
+                                    <p class="pBookSmall">When Anne joins her father and Elizabeth in the city, a cousin shows up; he is charming and everyone approves of him. At that time people traveled with horse and carriage, wrote letters on paper, and had different morals. It was a time when cousins would marry to retain and maintain family wealth and lands. To this end, the cousin is in hopes of taking Anne in the direction of marriage.
+                                    </p>
+                                    <p class="pBookSmall">When they moved into the city, Anne reacquaints herself with her friend Mrs Smith who is in a sad situation and weak health. Even so, she is a diversion for Anne to pass hours away from her family in pleasant conversation. But there is more to Mrs Smith then causal conversation, she has a sub-motive for maintaining this friendship, and she harbors a secret important enough to influence Anne&#8217;s fate.
+                                    </p>
+                                    <p class="pBookSmall">In Anne&#8217;s New World, is there a man worthy of her hand in marriage? Will it be her rich cousin or a new acquaintance, or will her old boyfriend have a second chance? Or will the men prefer the younger Musgrove women over our mature heroine? Or will Anne lose her interest in marriage and stay an independent woman making a life of her own?
+                                    </p>
+                                    <p class="pBookSmall">To take a quote from the book, &#8220;No one can withstand the charm of such a mystery.&#8221;
+                                    </p>
+                                    <p class="pBookSmall"><em>Persuasion</em> is a story of Anne becoming a woman of her own, a story of romantic naval officers, their wives, rich associates, and young d&#233;butantes. Behind every woman of substance is a little mystery. As <i>Persuasion</i> unfolds, Anne finds the answers to the mysteries of her heart and mind.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="Samples1" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h1 class="chapterTitle" style="color:#4B5F6A;">Chapter 1</h1>
+                                    <p class="pBookSmallNoIndent">
+                                        Sir Walter Elliot, of Kellynch Hall, in Somersetshire, was a man who, for his own amusement, never took up any book but the Baronetage; there he found occupation for an idle hour, and consolation in a distressed one; there his faculties were roused into admiration and respect, by contemplating the limited remnant of the earliest patents; there any unwelcome sensations, arising from domestic affairs changed naturally into pity and contempt as he turned over the almost endless creations of the last century; and there, if every other leaf were powerless, he could read his own history with an interest which never failed.  This was the page at which the favourite volume always opened:
+                                    </p>
+                                    <p class="pBookSmall">&#160;</p>
+                                    <p class="centerLines"><span style="font-family:Arial,sans-serif;">Elliot of Kellynch Hall</span>
+                                    </p>
+                                    <p class="computerMessages">Walter Elliot, born March 1, 1760, married, July 15, 1784, Elizabeth, daughter of James Stevenson, Esq. of South Park, in the county of Gloucester, by which lady (who died 1800) he has issue Elizabeth, born June 1, 1785; Anne, born August 9, 1787; a still-born son, November 5, 1789; Mary, born November 20, 1791.
+                                    </p>
+                                    <p class="pBookSmall">Precisely such had the paragraph originally stood from the printer&#8217;s hands; but Sir Walter had improved it by adding, for the information of himself and his family, these words, after the date of Mary&#8217;s birth&#8212;
+                                    </p>
+                                    <p class="computerMessages">Married, December 16, 1810, Charles, son and heir of Charles Musgrove, Esq. of Uppercross, in the county of Somerset,
+                                    </p>
+                                    <p class="pBookSmall">And by inserting most accurately the day of the month on which he had lost his wife.
+                                    </p>
+                                    <p class="pBookSmall">Then followed the history and rise of the ancient and respectable family, in the usual terms; how it had been first settled in Cheshire; how mentioned in Dugdale, serving the office of high sheriff, representing a borough in three successive parliaments, exertions of loyalty, and dignity of baronet, in the first year of Charles II, with all the Marys and Elizabeths they had married; forming altogether two handsome duodecimo pages, and concluding with the arms and motto:&#8212;
+                                    </p>
+                                    <p class="computerMessages">Principal seat, Kellynch Hall, in the county of Somerset.
+                                    </p>
+                                    <p class="pBookSmall">And Sir Walter&#8217;s handwriting again in this finale:&#8212;
+                                    </p>
+                                    <p class="computerMessages">Heir presumptive, William Walter Elliot, Esq., great grandson of the second Sir Walter.
+                                    </p>
+                                    <p class="pBookSmall">Vanity was the beginning and the end of Sir Walter Elliot&#8217;s character; vanity of person and of situation.  He had been remarkably handsome in his youth; and, at fifty-four, was still a very fine man.  Few women could think more of their personal appearance than he did, nor could the valet of any new made lord be more delighted with the place he held in society.  He considered the blessing of beauty as inferior only to the blessing of a baronetcy; and the Sir Walter Elliot, who united these gifts, was the constant object of his warmest respect and devotion.
+                                    </p>
+                                    <p class="pBookSmall">His good looks and his rank had one fair claim on his attachment; since to them he must have owed a wife of very superior character to anything deserved by his own.  Lady Elliot had been an excellent woman, sensible and amiable; whose judgement and conduct, if they might be pardoned the youthful infatuation which made her Lady Elliot, had never required indulgence afterwards.&#8212;She had humoured, or softened, or concealed his failings, and promoted his real respectability for seventeen years; and though not the very happiest being in the world herself, had found enough in her duties, her friends, and her children, to attach her to life, and make it no matter of indifference to her when she was called on to quit them.&#8212;Three girls, the two eldest sixteen and fourteen, was an awful legacy for a mother to bequeath, an awful charge rather, to confide to the authority and guidance of a conceited, silly father.  She had, however, one very intimate friend, a sensible, deserving woman, who had been brought, by strong attachment to herself, to settle close by her, in the village of Kellynch; and on her kindness and advice, Lady Elliot mainly relied for the best help and maintenance of the good principles and instruction which she had been anxiously giving her daughters.
+                                    </p>
+                                    <p class="pBookSmall">This friend, and Sir Walter, did not marry, whatever might have been anticipated on that head by their acquaintance.  Thirteen years had passed away since Lady Elliot&#8217;s death, and they were still near neighbours and intimate friends, and one remained a widower, the other a widow.
+                                    </p>
+                                    <p class="pBookSmall">That Lady Russell, of steady age and character, and extremely well provided for, should have no thought of a second marriage, needs no apology to the public, which is rather apt to be unreasonably discontented when a woman does marry again, than when she does not; but Sir Walter&#8217;s continuing in singleness requires explanation.  Be it known then, that Sir Walter, like a good father, (having met with one or two private disappointments in very unreasonable applications), prided himself on remaining single for his dear daughters&#8217; sake.  For one daughter, his eldest, he would really have given up anything, which he had not been very much tempted to do.  Elizabeth had succeeded, at sixteen, to all that was possible, of her mother&#8217;s rights and consequence; and being very handsome, and very like himself, her influence had always been great, and they had gone on together most happily.  His two other children were of very inferior value.  Mary had acquired a little artificial importance, by becoming Mrs Charles Musgrove; but Anne, with an elegance of mind and sweetness of character, which must have placed her high with any people of real understanding, was nobody with either father or sister; her word had no weight, her convenience was always to give way&#8212;she was only Anne.
+                                    </p>
+                                    <p class="pBookSmall">To Lady Russell, indeed, she was a most dear and highly valued god-daughter, favourite, and friend.  Lady Russell loved them all; but it was only in Anne that she could fancy the mother to revive again.
+                                    </p>
+                                    <p class="pBookSmall">A few years before, Anne Elliot had been a very pretty girl, but her bloom had vanished early; and as even in its height, her father had found little to admire in her, (so totally different were her delicate features and mild dark eyes from his own), there could be nothing in them, now that she was faded and thin, to excite his esteem. He had never indulged much hope, he had now none, of ever reading her name in any other page of his favourite work.  All equality of alliance must rest with Elizabeth, for Mary had merely connected herself with an old country family of respectability and large fortune, and had therefore given all the honour and received none: Elizabeth would, one day or other, marry suitably.
+                                    </p>
+                                    <p class="pBookSmall">It sometimes happens that a woman is handsomer at twenty-nine than she was ten years before; and, generally speaking, if there has been neither ill health nor anxiety, it is a time of life at which scarcely any charm is lost.  It was so with Elizabeth, still the same handsome Miss Elliot that she had begun to be thirteen years ago, and Sir Walter might be excused, therefore, in forgetting her age, or, at least, be deemed only half a fool, for thinking himself and Elizabeth as blooming as ever, amidst the wreck of the good looks of everybody else; for he could plainly see how old all the rest of his family and acquaintance were growing.  Anne haggard, Mary coarse, every face in the neighbourhood worsting, and the rapid increase of the crow&#8217;s foot about Lady Russell&#8217;s temples had long been a distress to him.
+                                    </p>
+                                    <p class="pBookSmall">Elizabeth did not quite equal her father in personal contentment. Thirteen years had seen her mistress of Kellynch Hall, presiding and directing with a self-possession and decision which could never have given the idea of her being younger than she was.  For thirteen years had she been doing the honours, and laying down the domestic law at home, and leading the way to the chaise and four, and walking immediately after Lady Russell out of all the drawing-rooms and dining-rooms in the country.  Thirteen winters&#8217; revolving frosts had seen her opening every ball of credit which a scanty neighbourhood afforded, and thirteen springs shown their blossoms, as she travelled up to London with her father, for a few weeks&#8217; annual enjoyment of the great world.  She had the remembrance of all this, she had the consciousness of being nine-and-twenty to give her some regrets and some apprehensions; she was fully satisfied of being still quite as handsome as ever, but she felt her approach to the years of danger, and would have rejoiced to be certain of being properly solicited by baronet-blood within the next twelvemonth or two.  Then might she again take up the book of books with as much enjoyment as in her early youth, but now she liked it not.  Always to be presented with the date of her own birth and see no marriage follow but that of a youngest sister, made the book an evil; and more than once, when her father had left it open on the table near her, had she closed it, with averted eyes, and pushed it away.
+                                    </p>
+                                    <p class="pBookSmall">She had had a disappointment, moreover, which that book, and especially the history of her own family, must ever present the remembrance of. The heir presumptive, the very William Walter Elliot, Esq., whose rights had been so generously supported by her father, had disappointed her.
+                                    </p>
+                                    <p class="pBookSmall">She had, while a very young girl, as soon as she had known him to be, in the event of her having no brother, the future baronet, meant to marry him, and her father had always meant that she should.  He had not been known to them as a boy; but soon after Lady Elliot&#8217;s death, Sir Walter had sought the acquaintance, and though his overtures had not been met with any warmth, he had persevered in seeking it, making allowance for the modest drawing-back of youth; and, in one of their spring excursions to London, when Elizabeth was in her first bloom, Mr Elliot had been forced into the introduction.
+                                    </p>
+                                    <p class="pBookSmall">He was at that time a very young man, just engaged in the study of the law; and Elizabeth found him extremely agreeable, and every plan in his favour was confirmed.  He was invited to Kellynch Hall; he was talked of and expected all the rest of the year; but he never came.  The following spring he was seen again in town, found equally agreeable, again encouraged, invited, and expected, and again he did not come; and the next tidings were that he was married.  Instead of pushing his fortune in the line marked out for the heir of the house of Elliot, he had purchased independence by uniting himself to a rich woman of inferior birth.
+                                    </p>
+                                    <p class="pBookSmall">Sir Walter has resented it.  As the head of the house, he felt that he ought to have been consulted, especially after taking the young man so publicly by the hand; &#8220;For they must have been seen together,&#8221; he observed, &#8220;once at Tattersall&#8217;s, and twice in the lobby of the House of Commons.&#8221;  His disapprobation was expressed, but apparently very little regarded.  Mr Elliot had attempted no apology, and shown himself as unsolicitous of being longer noticed by the family, as Sir Walter considered him unworthy of it:  all acquaintance between them had ceased.
+                                    </p>
+                                    <p class="pBookSmall">This very awkward history of Mr Elliot was still, after an interval of several years, felt with anger by Elizabeth, who had liked the man for himself, and still more for being her father&#8217;s heir, and whose strong family pride could see only in him a proper match for Sir Walter Elliot&#8217;s eldest daughter.  There was not a baronet from A to Z whom her feelings could have so willingly acknowledged as an equal.  Yet so miserably had he conducted himself, that though she was at this present time (the summer of 1814) wearing black ribbons for his wife, she could not admit him to be worth thinking of again.  The disgrace of his first marriage might, perhaps, as there was no reason to suppose it perpetuated by offspring, have been got over, had he not done worse; but he had, as by the accustomary intervention of kind friends, they had been informed, spoken most disrespectfully of them all, most slightingly and contemptuously of the very blood he belonged to, and the honours which were hereafter to be his own.  This could not be pardoned.
+                                    </p>
+                                    <p class="pBookSmall">Such were Elizabeth Elliot&#8217;s sentiments and sensations; such the cares to alloy, the agitations to vary, the sameness and the elegance, the prosperity and the nothingness of her scene of life; such the feelings to give interest to a long, uneventful residence in one country circle, to fill the vacancies which there were no habits of utility abroad, no talents or accomplishments for home, to occupy.
+                                    </p>
+                                    <p class="pBookSmall">But now, another occupation and solicitude of mind was beginning to be added to these.  Her father was growing distressed for money.  She knew, that when he now took up the Baronetage, it was to drive the heavy bills of his tradespeople, and the unwelcome hints of Mr Shepherd, his agent, from his thoughts.  The Kellynch property was good, but not equal to Sir Walter&#8217;s apprehension of the state required in its possessor.  While Lady Elliot lived, there had been method, moderation, and economy, which had just kept him within his income; but with her had died all such right-mindedness, and from that period he had been constantly exceeding it.  It had not been possible for him to spend less; he had done nothing but what Sir Walter Elliot was imperiously called on to do; but blameless as he was, he was not only growing dreadfully in debt, but was hearing of it so often, that it became vain to attempt concealing it longer, even partially, from his daughter.  He had given her some hints of it the last spring in town; he had gone so far even as to say, &#8220;Can we retrench?  Does it occur to you that there is any one article in which we can retrench?&#8221; and Elizabeth, to do her justice, had, in the first ardour of female alarm, set seriously to think what could be done, and had finally proposed these two branches of economy, to cut off some unnecessary charities, and to refrain from new furnishing the drawing-room; to which expedients she afterwards added the happy thought of their taking no present down to Anne, as had been the usual yearly custom.  But these measures, however good in themselves, were insufficient for the real extent of the evil, the whole of which Sir Walter found himself obliged to confess to her soon afterwards.  Elizabeth had nothing to propose of deeper efficacy.  She felt herself ill-used and unfortunate, as did her father; and they were neither of them able to devise any means of lessening their expenses without compromising their dignity, or relinquishing their comforts in a way not to be borne.
+                                    </p>
+                                    <p class="pBookSmall">There was only a small part of his estate that Sir Walter could dispose of; but had every acre been alienable, it would have made no difference.  He had condescended to mortgage as far as he had the power, but he would never condescend to sell.  No; he would never disgrace his name so far.  The Kellynch estate should be transmitted whole and entire, as he had received it.
+                                    </p>
+                                    <p class="pBookSmall">Their two confidential friends, Mr Shepherd, who lived in the neighbouring market town, and Lady Russell, were called to advise them; and both father and daughter seemed to expect that something should be struck out by one or the other to remove their embarrassments and reduce their expenditure, without involving the loss of any indulgence of taste or pride.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="Samples2" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h1 class="chapterTitle" style="color:#4B5F6A;">Chapter 2</h1>
+                                    <p class="pBookSmallNoIndent">
+                                        Mr Shepherd, a civil, cautious lawyer, who, whatever might be his hold or his views on Sir Walter, would rather have the disagreeable prompted by anybody else, excused himself from offering the slightest hint, and only begged leave to recommend an implicit reference to the excellent judgement of Lady Russell, from whose known good sense he fully expected to have just such resolute measures advised as he meant to see finally adopted.
+                                    </p>
+                                    <p class="pBookSmall">Lady Russell was most anxiously zealous on the subject, and gave it much serious consideration.  She was a woman rather of sound than of quick abilities, whose difficulties in coming to any decision in this instance were great, from the opposition of two leading principles. She was of strict integrity herself, with a delicate sense of honour; but she was as desirous of saving Sir Walter&#8217;s feelings, as solicitous for the credit of the family, as aristocratic in her ideas of what was due to them, as anybody of sense and honesty could well be.  She was a benevolent, charitable, good woman, and capable of strong attachments, most correct in her conduct, strict in her notions of decorum, and with manners that were held a standard of good-breeding.  She had a cultivated mind, and was, generally speaking, rational and consistent; but she had prejudices on the side of ancestry; she had a value for rank and consequence, which blinded her a little to the faults of those who possessed them.  Herself the widow of only a knight, she gave the dignity of a baronet all its due; and Sir Walter, independent of his claims as an old acquaintance, an attentive neighbour, an obliging landlord, the husband of her very dear friend, the father of Anne and her sisters, was, as being Sir Walter, in her apprehension, entitled to a great deal of compassion and consideration under his present difficulties.
+                                    </p>
+                                    <p class="pBookSmall">They must retrench; that did not admit of a doubt.  But she was very anxious to have it done with the least possible pain to him and Elizabeth. She drew up plans of economy, she made exact calculations, and she did what nobody else thought of doing:  she consulted Anne, who never seemed considered by the others as having any interest in the question. She consulted, and in a degree was influenced by her in marking out the scheme of retrenchment which was at last submitted to Sir Walter. Every emendation of Anne&#8217;s had been on the side of honesty against importance.  She wanted more vigorous measures, a more complete reformation, a quicker release from debt, a much higher tone of indifference for everything but justice and equity.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;If we can persuade your father to all this,&#8221; said Lady Russell, looking over her paper, &#8220;much maybe done.  If he will adopt these regulations, in seven years he will be clear; and I hope we maybe able to convince him and Elizabeth, that Kellynch Hall has a respectability in itself which cannot be affected by these reductions; and that the true dignity of Sir Walter Elliot will be very far from lessened in the eyes of sensible people, by acting like a man of principle.  What will he be doing, in fact, but what very many of our first families have done, or ought to do?  There will be nothing singular in his case; and it is singularity which often makes the worst part of our suffering, as it always does of our conduct.  I have great hope of prevailing.  We must be serious and decided; for after all, the person who has contracted debts must pay them; and though a great deal is due to the feelings of the gentleman, and the head of a house, like your father, there is still more due to the character of an honest man.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">This was the principle on which Anne wanted her father to be proceeding, his friends to be urging him.  She considered it as an act of indispensable duty to clear away the claims of creditors with all the expedition which the most comprehensive retrenchments could secure, and saw no dignity in anything short of it.  She wanted it to be prescribed, and felt as a duty.  She rated Lady Russell&#8217;s influence highly; and as to the severe degree of self-denial which her own conscience prompted, she believed there might be little more difficulty in persuading them to a complete, than to half a reformation.  Her knowledge of her father and Elizabeth inclined her to think that the sacrifice of one pair of horses would be hardly less painful than of both, and so on, through the whole list of Lady Russell&#8217;s too gentle reductions.
+                                    </p>
+                                    <p class="pBookSmall">How Anne&#8217;s more rigid requisitions might have been taken is of little consequence.  Lady Russell&#8217;s had no success at all: could not be put up with, were not to be borne. &#8220;What! every comfort of life knocked off! Journeys, London, servants, horses, table&#8212;contractions and restrictions every where!  To live no longer with the decencies even of a private gentleman!  No, he would sooner quit Kellynch Hall at once, than remain in it on such disgraceful terms.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Quit Kellynch Hall.&#8221;  The hint was immediately taken up by Mr Shepherd, whose interest was involved in the reality of Sir Walter&#8217;s retrenching, and who was perfectly persuaded that nothing would be done without a change of abode.  &#8220;Since the idea had been started in the very quarter which ought to dictate, he had no scruple,&#8221; he said, &#8220;in confessing his judgement to be entirely on that side.  It did not appear to him that Sir Walter could materially alter his style of living in a house which had such a character of hospitality and ancient dignity to support.  In any other place Sir Walter might judge for himself; and would be looked up to, as regulating the modes of life in whatever way he might choose to model his household.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Sir Walter would quit Kellynch Hall; and after a very few days more of doubt and indecision, the great question of whither he should go was settled, and the first outline of this important change made out.
+                                    </p>
+                                    <p class="pBookSmall">There had been three alternatives, London, Bath, or another house in the country.  All Anne&#8217;s wishes had been for the latter.  A small house in their own neighbourhood, where they might still have Lady Russell&#8217;s society, still be near Mary, and still have the pleasure of sometimes seeing the lawns and groves of Kellynch, was the object of her ambition.  But the usual fate of Anne attended her, in having something very opposite from her inclination fixed on.  She disliked Bath, and did not think it agreed with her; and Bath was to be her home.
+                                    </p>
+                                    <p class="pBookSmall">Sir Walter had at first thought more of London; but Mr Shepherd felt that he could not be trusted in London, and had been skilful enough to dissuade him from it, and make Bath preferred.  It was a much safer place for a gentleman in his predicament:  he might there be important at comparatively little expense.  Two material advantages of Bath over London had of course been given all their weight:  its more convenient distance from Kellynch, only fifty miles, and Lady Russell&#8217;s spending some part of every winter there; and to the very great satisfaction of Lady Russell, whose first views on the projected change had been for Bath, Sir Walter and Elizabeth were induced to believe that they should lose neither consequence nor enjoyment by settling there.
+                                    </p>
+                                    <p class="pBookSmall">Lady Russell felt obliged to oppose her dear Anne&#8217;s known wishes.  It would be too much to expect Sir Walter to descend into a small house in his own neighbourhood.  Anne herself would have found the mortifications of it more than she foresaw, and to Sir Walter&#8217;s feelings they must have been dreadful.  And with regard to Anne&#8217;s dislike of Bath, she considered it as a prejudice and mistake arising, first, from the circumstance of her having been three years at school there, after her mother&#8217;s death; and secondly, from her happening to be not in perfectly good spirits the only winter which she had afterwards spent there with herself.
+                                    </p>
+                                    <p class="pBookSmall">Lady Russell was fond of Bath, in short, and disposed to think it must suit them all; and as to her young friend&#8217;s health, by passing all the warm months with her at Kellynch Lodge, every danger would be avoided; and it was in fact, a change which must do both health and spirits good.  Anne had been too little from home, too little seen. Her spirits were not high.  A larger society would improve them.  She wanted her to be more known.
+                                    </p>
+                                    <p class="pBookSmall">The undesirableness of any other house in the same neighbourhood for Sir Walter was certainly much strengthened by one part, and a very material part of the scheme, which had been happily engrafted on the beginning.  He was not only to quit his home, but to see it in the hands of others; a trial of fortitude, which stronger heads than Sir Walter&#8217;s have found too much.  Kellynch Hall was to be let.  This, however, was a profound secret, not to be breathed beyond their own circle.
+                                    </p>
+                                    <p class="pBookSmall">Sir Walter could not have borne the degradation of being known to design letting his house.  Mr Shepherd had once mentioned the word &#8220;advertise,&#8221; but never dared approach it again.  Sir Walter spurned the idea of its being offered in any manner; forbad the slightest hint being dropped of his having such an intention; and it was only on the supposition of his being spontaneously solicited by some most unexceptionable applicant, on his own terms, and as a great favour, that he would let it at all.
+                                    </p>
+                                    <p class="pBookSmall">How quick come the reasons for approving what we like!  Lady Russell had another excellent one at hand, for being extremely glad that Sir Walter and his family were to remove from the country.  Elizabeth had been lately forming an intimacy, which she wished to see interrupted. It was with the daughter of Mr Shepherd, who had returned, after an unprosperous marriage, to her father&#8217;s house, with the additional burden of two children.  She was a clever young woman, who understood the art of pleasing&#8212;the art of pleasing, at least, at Kellynch Hall; and who had made herself so acceptable to Miss Elliot, as to have been already staying there more than once, in spite of all that Lady Russell, who thought it a friendship quite out of place, could hint of caution and reserve.
+                                    </p>
+                                    <p class="pBookSmall">Lady Russell, indeed, had scarcely any influence with Elizabeth, and seemed to love her, rather because she would love her, than because Elizabeth deserved it.  She had never received from her more than outward attention, nothing beyond the observances of complaisance; had never succeeded in any point which she wanted to carry, against previous inclination.  She had been repeatedly very earnest in trying to get Anne included in the visit to London, sensibly open to all the injustice and all the discredit of the selfish arrangements which shut her out, and on many lesser occasions had endeavoured to give Elizabeth the advantage of her own better judgement and experience; but always in vain:  Elizabeth would go her own way; and never had she pursued it in more decided opposition to Lady Russell than in this selection of Mrs Clay; turning from the society of so deserving a sister, to bestow her affection and confidence on one who ought to have been nothing to her but the object of distant civility.
+                                    </p>
+                                    <p class="pBookSmall">From situation, Mrs Clay was, in Lady Russell&#8217;s estimate, a very unequal, and in her character she believed a very dangerous companion; and a removal that would leave Mrs Clay behind, and bring a choice of more suitable intimates within Miss Elliot&#8217;s reach, was therefore an object of first-rate importance.
+                                    </p>
+                                    <p class="pBookSmall">&#160;</p>
+                                    <p class="pBookSmallNoIndent">End of chapter, end of sample.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <script type="text/javascript" src="../pageBottom.js"></script>
+            </div>
+        </div>
+
+    </body>
+</html>

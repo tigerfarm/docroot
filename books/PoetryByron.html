@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>TFP Byron</title>
+        <link href="../images/favicontfp.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="../styles.css" rel="stylesheet" type="text/css"/>
+        <link href="../jqStyles.css" rel="stylesheet" type="text/css"/>
+        <!-- Note, script order is important! -->
+        <script src="../js/jquery310.js" type="text/javascript"></script>
+        <script src="../js/jqueryTFP.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            $(document).ready(function () {
+                $("#tabs li").click(function () {
+                    //	First remove class "active" from currently active tab
+                    $("#tabs li").removeClass('active');
+                    //	Now add class "active" to the selected/clicked tab
+                    $(this).addClass("active");
+                    //	Hide all tab content
+                    $(".tab_content").hide();
+                    //	Here we get the href value of the selected tab
+                    var selected_tab = $(this).find("a").attr("href");
+                    //	Show the selected tab content
+                    $(selected_tab).fadeIn();
+                    //	At the end, we add return false so that the click on the link is not executed
+                    return false;
+                });
+            });
+            /* ]]> */
+        </script>
+        <script type="text/javascript">
+            // Hover Popup
+            $(function () {
+                var moveLeft = 0;
+                var moveDown = 30;
+                $('span#StacyDavidPopup').hover(function (e) {
+                    $('div#StacyDavidDiv').show()
+                            .css('top', e.pageY + moveDown)
+                            .css('left', e.pageX + moveLeft)
+                            .appendTo('body');
+                }, function () {
+                    $('div#StacyDavidDiv').hide();
+                });
+            });
+        </script>
+        <style type="text/css"><!--
+            /* Hover Popup */
+            div#StacyDavidDiv {
+                border: 3px solid #B76418;
+                border-radius:12px;
+                background: #FFF1B3;
+                font-size: 10pt;
+                display: none;
+                position: absolute;
+                width: 280px;
+                padding: 10px;
+            }
+            --></style>
+        <script type="text/javascript">
+            // Hover Popup
+            $(function () {
+                var moveLeft = 0;
+                var moveDown = 30;
+                $('span#ByronPopup').hover(function (e) {
+                    $('div#ByronDiv').show()
+                            .css('top', e.pageY + moveDown)
+                            .css('left', e.pageX + moveLeft)
+                            .appendTo('body');
+                }, function () {
+                    $('div#ByronDiv').hide();
+                });
+            });
+        </script>
+        <style type="text/css"><!--
+            /* Hover Popup */
+            div#ByronDiv {
+                border: 3px solid #B76418;
+                border-radius:12px;
+                background: #FFF1B3;
+                font-size: 10pt;
+                display: none;
+                position: absolute;
+                width: 280px;
+                padding: 10px;
+            }
+            --></style>
+    </head>
+    <body>
+        <div id="outerBorder">
+            <script type="text/javascript" src="../pageTop.js"></script>
+            <div class="main">
+                <div class="leftSidebar">
+                    <script type="text/javascript" src="../about/leftMenu.js"></script>
+                    <script type="text/javascript" src="../blog/leftMenu.js"></script>
+                    <div class="navtitle">Poetry: Byron</div>
+                </div>
+                <div class="contentLong">
+                    <h2>Poetry: Byron</h2>
+
+                    <div id="tabs_wrapper">
+                        <div id="tabs_container">
+                            <ul id="tabs">
+                                <li class="active"><a href="#Objective">Poems</a></li>
+                                <li><a href="#tab1">Tender is the Night</a></li>
+                                <li><a href="#tab2">She walks in beauty</a></li>
+                            </ul>
+                        </div>
+                        <div id="tabs_content_container">
+                            <div id="Objective" class="tab_content" style="display:block;">
+                                <div class="eReaderHTMLpage">
+                                    <h1>Index</h1>
+                                    <hr/>
+                                    <ul class="navlist" style="font-size: 12pt">
+                                        <li style="width:460px; margin-top:12px;">
+                                            <span id="StacyDavidPopup" style="color: #B76418;"><em>Tender is the Night</em></span>:
+                                            A derivative of Lord Byron's <em>She walks in Beauty</em>.
+                                            <div id="StacyDavidDiv">
+                                                <em>Tender is the Night</em>, stanza #1
+                                                <pre style="font-family:Helvetica;font-size:12px;line-height:160%;background:#FFF1B3;">
+She walks in beauty, like the night
+Of cloudless climes and starry bright,
+And all that’s best of dark and light
+   Meet in the aspects of her eyes;
+   Thus mellowed by the tender skies
+   Which heaven too sunny, day denies.
+...                                             </pre>
+                                            </div>
+                                        </li>
+                                        <li style="width:460px; margin-top:12px;">
+                                            <span id="ByronPopup" style="color: #B76418;">
+                                                <em>She walks in beauty</em></span> by Lord Byron
+                                            <div id="ByronDiv">
+                                                <em>She walks in beauty</em>, stanza #1
+                                                <pre style="font-family:Helvetica;font-size:12px;line-height:160%;background:#FFF1B3;">
+She walks in beauty, like the night
+   Of cloudless climes and starry skies;
+And all that’s best of dark and bright
+   Meet in her aspect and her eyes;
+Thus mellowed to that tender light
+   Which heaven to gaudy day denies.
+...                                             </pre>
+                                            </div>
+                                    </ul>
+                                    <hr style="width:460px;margin-top:9px; height:2px; color:gray;" />
+                                </div>
+                            </div>
+                            <div id="tab1" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h2>Tender is the Night</h2>
+                                    <pre class="Poetry">
+She walks in beauty, like the night
+Of cloudless climes and starry bright,
+And all that’s best of dark and light
+   Meet in the aspects of her eyes;
+   Thus mellowed by the tender skies
+   Which heaven too sunny, day denies.
+
+One shade the more, one ray the less,
+Which waves in every raven tress,
+Where thoughts serenely sweet express,
+   Or softly lightens o’er her face
+   Had half impaired her nameless grace;
+   How pure, how dear her hair in place.
+
+And on that cheek, o’er and below,
+So soft, so calm, the tints that glow,
+The smile that wins, it does show,
+   That a mind at peace is eloquent,
+   And tells of days in goodness spent,
+   A heart whose love is innocent!</pre>
+                                    <p style="font-family:Helvetica;font-size:12px;">by Stacy David, inspired by Lord Byron's She walks in Beauty.</p>
+                                </div>
+                            </div>
+                            <div id="tab2" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h2>She Walks in Beauty</h2>
+                                    <pre class="Poetry">She walks in beauty, like the night
+   Of cloudless climes and starry skies;
+And all that’s best of dark and bright
+   Meet in her aspect and her eyes;
+Thus mellowed to that tender light
+   Which heaven to gaudy day denies.
+
+One shade the more, one ray the less,
+   Had half impaired the nameless grace
+Which waves in every raven tress,
+   Or softly lightens o’er her face;
+Where thoughts serenely sweet express,
+   How pure, how dear their dwelling-place.
+
+And on that cheek, and o’er that brow,
+   So soft, so calm, yet eloquent,
+The smiles that win, the tints that glow,
+   But tell of days in goodness spent,
+A mind at peace with all below,
+   A heart whose love is innocent!</pre>
+                                    <p style="font-family:Helvetica;font-size:12px;">by Lord Byron</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <script type="text/javascript" src="../pageBottom.js"></script>
+            </div>
+        </div>
+
+    </body>
+</html>

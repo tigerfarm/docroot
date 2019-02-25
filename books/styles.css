@@ -1,0 +1,188 @@
+/* 
+Company web site CSS style sheet.
+Created by Stacy Thurston Sept.29,2012
+*/
+
+/* eBook HTML ereader ----------------------------------------------------------
+*/
+/* start: width --- height adjustment */
+.eReaderHTMLcover {
+    height:510px; 
+    padding:6px 0px 6px 20px;
+}
+.eReaderHTMLcoverLab {
+    width:652px; 
+    height:510px;
+    padding:6px 0px 6px 20px;
+}
+.eReaderHTMLpage {
+    width:480px; 
+    height:500px; 
+    padding:6px 16px 16px 12px;
+    font-size:1.0em;
+    line-height:160%;
+    overflow:auto; 
+}
+.eReaderHTMLpageLab {
+    width:652px; 
+    height:500px; 
+    padding:6px 16px 16px 12px;
+    font-size:1.0em;
+    line-height:160%;
+    overflow:auto; 
+}
+.eReaderHTMLpageTall,
+.eReaderHTMLpageWide {
+    width:652px; 
+    padding:6px 16px 16px 12px;
+    font-size:1.0em;
+    line-height:160%;
+    overflow:auto; 
+    /*    height:500px; */
+}
+#tabs_content_container {
+    width: 508px;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px;
+}
+#tabs_labContent_container {
+    width: 680px;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px;
+}
+/* Line at the top and bottom of the tabs to match: #tabs_content_container */
+#tabs_wrapper {
+    width: 530px;
+}
+#tabs_labWrapper {
+    width: 702px;
+}
+/* Line at the bottom of the tabs to match: #tabs_labContent_container */
+/* tabs_labWrapper.width = tabs_labContent_container.width + tabs_labContent_container.padding * 2 + tabs_labContent_container.border * 2 */
+/* tabs_labWrapper.width = 660 + 10 * 2 + 1 * 2 */
+/* eReaderHTMLpageLab is the display box width */
+/* -------------------------------------------------------------------------- */
+
+/* Still used? */
+.eReaderHTMLpageShort {
+    height:500px; 
+    padding:6px 6px 6px 6px;
+    font-size:1.0em;
+    line-height:160%;
+}
+
+#tabs_container {
+    border-bottom: 1px solid #ccc;
+}
+#tabs {
+    list-style: none;
+    padding: 5px 0 4px 0;
+    margin: 0 0 0 10px;
+    font: 0.75em arial;
+}
+
+#tabs li {
+    display: inline;
+}
+#tabs li a {
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    text-decoration: none;
+    background-color: #eeeeee;
+    border-bottom: none;
+    outline: none;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+}
+#tabs li a:hover {
+    background-color: #dddddd;
+    padding: 4px 6px;
+}
+#tabs li.active a {
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    padding: 4px 6px 5px 6px;
+    border-bottom: none;
+}
+#tabs li.active a:hover {
+    background-color: #eeeeee;
+    padding: 4px 6px 5px 6px;
+    border-bottom: none;
+}
+
+#tabs li a.icon_accept {
+    background-image: url(accept.png);
+    background-position: 5px;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+}
+#tabs li a.icon_accept:hover {
+    padding-left: 24px;
+}
+
+/* Needs fixing: Cause page shift.
+ */
+.tab_content {
+    display: none;
+}
+ 
+/* eBook styles ------------
+*/
+.chapterTitle {
+    color:#B76418;
+    font-size:1.8em;
+    margin:21px 0px 20px 0px;
+    text-align: center;
+}
+.pBook, .pBookIndent {
+    text-indent: 22.5px;
+    text-align:justify;
+    font-size:1.0em;
+    margin: 0px;
+    padding: 0px;
+}
+.pBookNoIndent {
+    text-indent: 0px;
+    text-align:justify;
+    font-size:1.0em;
+    margin: 0px;
+    padding: 0px;
+}
+.pBookSmall {
+    text-indent: 22.5px;
+    text-align:justify;
+    font-size:0.9em;
+    margin: 0px;
+    padding: 0px;
+}
+.pBookSmallNoIndent {
+    text-indent: 0px;
+    text-align:justify;
+    font-size:0.9em;
+    margin-bottom: 12px;
+    margin-top: 0px;
+    padding: 0px;
+}
+.pBookSmallRightLines {
+    text-align:right;
+    font-size:0.9em;
+    margin: 0px;
+    padding: 0px;
+}
+.computerMessages {
+    display: block;
+    font-family:Arial,sans-serif;
+    text-align: justify;
+    text-indent: 0;
+    margin-left: 36pt;
+    margin-right: 22.5pt;
+    font-size: 0.8em;
+    margin-bottom: 6pt;
+    margin-top: 6pt;
+}
+
+/* eof */

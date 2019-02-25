@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Wizard of Oz</title>
+        <link href="../images/favicontfp.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="../styles.css" rel="stylesheet" type="text/css"/>
+        <link href="../jqStyles.css" rel="stylesheet" type="text/css"/>
+        <!-- Note, script order is important! -->
+        <script src="../js/jquery310.js" type="text/javascript"></script>
+        <script src="../js/jqueryTFP.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            $(document).ready(function(){
+                $("#tabs li").click(function() {
+                    //	First remove class "active" from currently active tab
+                    $("#tabs li").removeClass('active');
+                    //	Now add class "active" to the selected/clicked tab
+                    $(this).addClass("active");
+                    //	Hide all tab content
+                    $(".tab_content").hide();
+                    //	Here we get the href value of the selected tab
+                    var selected_tab = $(this).find("a").attr("href");
+                    //	Show the selected tab content
+                    $(selected_tab).fadeIn();
+                    //	At the end, we add return false so that the click on the link is not executed
+                    return false;
+                });
+            });
+            /* ]]> */
+        </script>
+    </head>
+    <body>
+        <div id="fb-root" style="background: white;"></div>
+        <div id="outerBorder">
+            <script type="text/javascript" src="../pageTop.js"></script>
+            <div class="main">
+                <div class="leftSidebar">
+                    <script type="text/javascript" src="leftMenu.js"></script>
+                </div>
+                <div class="contentLong">
+                    <h2 style="color:#D9B909;">The Wonderful Wizard of Oz</h2>
+
+                    <div id="tabs_wrapper">
+                        <div id="tabs_container">
+                            <ul id="tabs">
+                                <li class="active"><a href="#tab1" style="color:#000000;">Cover</a></li>
+                                <li><a href="#download" style="color:#000000;">Download</a></li>
+                                <li><a href="#storyLines" style="color:#000000;">Lines</a></li>
+                                <li><a href="#Index" style="color:#000000;">Chapter List</a></li>
+                                <li><a href="#tab3" style="color:#000000;">Chapter 1</a></li>
+                                <li><a href="#tab4" style="color:#000000;">Chapter 2</a></li>
+                                <li><a href="#tab5" style="color:#000000;">Chapter 3</a></li>
+                            </ul>
+                        </div>
+                        <div id="tabs_content_container">
+                            <div id="tab1" class="tab_content" style="display:block;">
+                                <div class="eReaderHTMLcover">
+                                    <table>
+                                        <td><img src="../images/ozCover.jpg" title="The Wonderful Wizard of Oz cover page" /></td>
+                                        <td style="vertical-align:top;"><p>by,</p><p>L. Frank Baum</p></td>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="download" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <p class="noindent">Complete sample book.</p>
+                                    <p class="noindent"><a href="../books/download/WizardOfOz.epub" title="Download requires an ereader to read the ebook.">[EPUB]</a> download for an ereader.</p>
+                                    <p class="noindent"><a href="../books/download/WizardOfOz.mobi" title="For Kindle ereaders.">[MOBI]</a> download for the Kindle ereader.</p>
+                                    <p class="copyright">
+                                        An example for you to download, examine, and read,
+                                        using various <a href="eReaders.html">ereaders</a>.
+                                    </p>
+                                    <h1 class="bookTitle" style="color:#4B5F6A;">____________</h1>
+                                    <p class="linespacing">&#160;</p>
+                                    <p class="copyright">Published by Tiger Farm Press, February, 2013.</p>
+                                    <p class="copyright">Public Domain Book.</p>
+                                    <p class="copyright"><em>The Wonderful Wizard of Oz</em> was first published in 1900.</p>
+                                    <p class="linespacing">&#160;</p>
+                                    <p class="centerLines">TIGER FARM PRESS&#160;&#160;&#160;<img src="images/publisher.jpg" alt="Publisher"></img>&#160;&#160;&#160;CALIFORNIA</p>
+                                </div>
+                            </div>
+                            <div id="Index" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h4 class="toc" style="color:#D9B909;">Table of Contents</h4>
+                                    <p class="toc" style="color:#D9B909;">_____________________________</p>
+                                    <p class="pBookSmallNoIndent">Introduction</p>
+                                    <p class="pBookSmall">The Cyclone</p>
+                                    <p class="pBookSmall">The Council with the Munchkins</p>
+                                    <p class="pBookSmall">How Dorothy Saved the Scarecrow</p>
+                                    <p class="pBookSmall">The Road Through the Forest</p>
+                                    <p class="pBookSmall">The Rescue of the Tin Woodman</p>
+                                    <p class="pBookSmall">The Cowardly Lion</p>
+                                    <p class="pBookSmall">The Journey to the Great Oz</p>
+                                    <p class="pBookSmall">The Deadly Poppy Field</p>
+                                    <p class="pBookSmall">The Queen of the Field Mice</p>
+                                    <p class="pBookSmall">The Guardian of the Gate</p>
+                                    <p class="pBookSmall">The Wonderful City of Oz</p>
+                                    <p class="pBookSmall">The Search for the Wicked Witch</p>
+                                    <p class="pBookSmall">The Rescue</p>
+                                    <p class="pBookSmall">The Winged Monkeys</p>
+                                    <p class="pBookSmall">The Discovery of Oz, the Terrible</p>
+                                    <p class="pBookSmall">The Magic Art of the Great Humbug</p>
+                                    <p class="pBookSmall">How the Balloon Was Launched</p>
+                                    <p class="pBookSmall">Away to the South</p>
+                                    <p class="pBookSmall">Attacked by the Fighting Trees</p>
+                                    <p class="pBookSmall">The Dainty China Country</p>
+                                    <p class="pBookSmall">The Lion Becomes the King of Beasts</p>
+                                    <p class="pBookSmall">The Country of the Quadlings</p>
+                                    <p class="pBookSmall">Glinda The Good Witch Grants Dorothy’s Wish</p>
+                                    <p class="pBookSmall">Home Again</p>
+                                    <p class="pBookSmallNoIndent">About the Publisher</p>
+                                </div>
+                            </div>
+                            <div id="storyLines" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h1 class="chapterTitle" style="color:#D9B909;">Story Lines</h1>
+                                    <p class="pBookSmallNoIndent">
+                                        &#8220;There is no place like home,&#8221; said Dorthy
+                                    </p>
+                                    <hr style="width:50%"/>
+                                    <p class="pBookSmallNoIndent">
+                                        &#8220;Brains are the only things worth having in this world, no matter whether one is a crow or a man,&#8221; said an old crow to the Scarecrow.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div id="tab3" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h1 class="chapterTitle" style="color:#D9B909;">The Cyclone</h1>
+                                    <p class="pBookSmallNoIndent">
+                                        Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer&#8217;s wife. Their house was small, for the lumber to build it had to be carried by wagon many miles. There were four walls, a floor and a roof, which made one room; and this room contained a rusty looking cookstove, a cupboard for the dishes, a table, three or four chairs, and the beds. Uncle Henry and Aunt Em had a big bed in one corner, and Dorothy a little bed in another corner. There was no garret at all, and no cellar&#8212;except a small hole dug in the ground, called a cyclone cellar, where the family could go in case one of those great whirlwinds arose, mighty enough to crush any building in its path. It was reached by a trap door in the middle of the floor, from which a ladder led down into the small, dark hole.
+                                    </p>
+                                    <p class="pBookSmall">When Dorothy stood in the doorway and looked around, she could see nothing but the great gray prairie on every side.  Not a tree nor a house broke the broad sweep of flat country that reached to the edge of the sky in all directions.  The sun had baked the plowed land into a gray mass, with little cracks running through it.  Even the grass was not green, for the sun had burned the tops of the long blades until they were the same gray color to be seen everywhere.  Once the house had been painted, but the sun blistered the paint and the rains washed it away, and now the house was as dull and gray as everything else.
+                                    </p>
+                                    <p class="pBookSmall">When Aunt Em came there to live she was a young, pretty wife.  The sun and wind had changed her, too.  They had taken the sparkle from her eyes and left them a sober gray; they had taken the red from her cheeks and lips, and they were gray also.  She was thin and gaunt, and never smiled now.  When Dorothy, who was an orphan, first came to her, Aunt Em had been so startled by the child&#8217;s laughter that she would scream and press her hand upon her heart whenever Dorothy&#8217;s merry voice reached her ears; and she still looked at the little girl with wonder that she could find anything to laugh at.
+                                    </p>
+                                    <p class="pBookSmall">Uncle Henry never laughed.  He worked hard from morning till night and did not know what joy was.  He was gray also, from his long beard to his rough boots, and he looked stern and solemn, and rarely spoke.
+                                    </p>
+                                    <p class="pBookSmall">It was Toto that made Dorothy laugh, and saved her from growing as gray as her other surroundings.  Toto was not gray; he was a little black dog, with long silky hair and small black eyes that twinkled merrily on either side of his funny, wee nose.  Toto played all day long, and Dorothy played with him, and loved him dearly.
+                                    </p>
+                                    <p class="pBookSmall">Today, however, they were not playing.  Uncle Henry sat upon the doorstep and looked anxiously at the sky, which was even grayer than usual.  Dorothy stood in the door with Toto in her arms, and looked at the sky too.  Aunt Em was washing the dishes.
+                                    </p>
+                                    <p class="pBookSmall">From the far north they heard a low wail of the wind, and Uncle Henry and Dorothy could see where the long grass bowed in waves before the coming storm.  There now came a sharp whistling in the air from the south, and as they turned their eyes that way they saw ripples in the grass coming from that direction also.
+                                    </p>
+                                    <p class="pBookSmall">Suddenly Uncle Henry stood up.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;There&#8217;s a cyclone coming, Em,&#8221; he called to his wife.  &#8220;I&#8217;ll go look after the stock.&#8221;  Then he ran toward the sheds where the cows and horses were kept.
+                                    </p>
+                                    <p class="pBookSmall">Aunt Em dropped her work and came to the door.  One glance told her of the danger close at hand.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Quick, Dorothy!&#8221; she screamed.  &#8220;Run for the cellar!&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Toto jumped out of Dorothy&#8217;s arms and hid under the bed, and the girl started to get him.  Aunt Em, badly frightened, threw open the trap door in the floor and climbed down the ladder into the small, dark hole.  Dorothy caught Toto at last and started to follow her aunt. When she was halfway across the room there came a great shriek from the wind, and the house shook so hard that she lost her footing and sat down suddenly upon the floor.
+                                    </p>
+                                    <p class="pBookSmall">Then a strange thing happened.
+                                    </p>
+                                    <p class="pBookSmall">The house whirled around two or three times and rose slowly through the air.  Dorothy felt as if she were going up in a balloon.
+                                    </p>
+                                    <p class="pBookSmall">The north and south winds met where the house stood, and made it the exact center of the cyclone.  In the middle of a cyclone the air is generally still, but the great pressure of the wind on every side of the house raised it up higher and higher, until it was at the very top of the cyclone; and there it remained and was carried miles and miles away as easily as you could carry a feather.
+                                    </p>
+                                    <p class="pBookSmall">It was very dark, and the wind howled horribly around her, but Dorothy found she was riding quite easily.  After the first few whirls around, and one other time when the house tipped badly, she felt as if she were being rocked gently, like a baby in a cradle.
+                                    </p>
+                                    <p class="pBookSmall">Toto did not like it.  He ran about the room, now here, now there, barking loudly; but Dorothy sat quite still on the floor and waited to see what would happen.
+                                    </p>
+                                    <p class="pBookSmall">Once Toto got too near the open trap door, and fell in; and at first the little girl thought she had lost him.  But soon she saw one of his ears sticking up through the hole, for the strong pressure of the air was keeping him up so that he could not fall.  She crept to the hole, caught Toto by the ear, and dragged him into the room again, afterward closing the trap door so that no more accidents could happen.
+                                    </p>
+                                    <p class="pBookSmall">Hour after hour passed away, and slowly Dorothy got over her fright; but she felt quite lonely, and the wind shrieked so loudly all about her that she nearly became deaf.  At first she had wondered if she would be dashed to pieces when the house fell again; but as the hours passed and nothing terrible happened, she stopped worrying and resolved to wait calmly and see what the future would bring.  At last she crawled over the swaying floor to her bed, and lay down upon it; and Toto followed and lay down beside her.
+                                    </p>
+                                    <p class="pBookSmall">In spite of the swaying of the house and the wailing of the wind, Dorothy soon closed her eyes and fell fast asleep.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="tab4" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h1 class="chapterTitle" style="color:#D9B909;">The Council with the Munchkins</h1>
+                                    <p class="pBookSmallNoIndent">
+                                        She was awakened by a shock, so sudden and severe that if Dorothy had not been lying on the soft bed she might have been hurt.  As it was, the jar made her catch her breath and wonder what had happened; and Toto put his cold little nose into her face and whined dismally. Dorothy sat up and noticed that the house was not moving; nor was it dark, for the bright sunshine came in at the window, flooding the little room.  She sprang from her bed and with Toto at her heels ran and opened the door.
+                                    </p>
+                                    <p class="pBookSmall">The little girl gave a cry of amazement and looked about her, her eyes growing bigger and bigger at the wonderful sights she saw.
+                                    </p>
+                                    <p class="pBookSmall">The cyclone had set the house down very gently&#8212;for a cyclone&#8212;in the midst of a country of marvelous beauty.  There were lovely patches of greensward all about, with stately trees bearing rich and luscious fruits.  Banks of gorgeous flowers were on every hand, and birds with rare and brilliant plumage sang and fluttered in the trees and bushes. A little way off was a small brook, rushing and sparkling along between green banks, and murmuring in a voice very grateful to a little girl who had lived so long on the dry, gray prairies.
+                                    </p>
+                                    <p class="pBookSmall">While she stood looking eagerly at the strange and beautiful sights, she noticed coming toward her a group of the queerest people she had ever seen.  They were not as big as the grown folk she had always been used to; but neither were they very small.  In fact, they seemed about as tall as Dorothy, who was a well-grown child for her age, although they were, so far as looks go, many years older.
+                                    </p>
+                                    <p class="pBookSmall">Three were men and one a woman, and all were oddly dressed.  They wore round hats that rose to a small point a foot above their heads, with little bells around the brims that tinkled sweetly as they moved.  The hats of the men were blue; the little woman&#8217;s hat was white, and she wore a white gown that hung in pleats from her shoulders.  Over it were sprinkled little stars that glistened in the sun like diamonds.  The men were dressed in blue, of the same shade as their hats, and wore well-polished boots with a deep roll of blue at the tops.  The men, Dorothy thought, were about as old as Uncle Henry, for two of them had beards.  But the little woman was doubtless much older.  Her face was covered with wrinkles, her hair was nearly white, and she walked rather stiffly.
+                                    </p>
+                                    <p class="pBookSmall">When these people drew near the house where Dorothy was standing in the doorway, they paused and whispered among themselves, as if afraid to come farther.  But the little old woman walked up to Dorothy, made a low bow and said, in a sweet voice:
+                                    </p>
+                                    <p class="pBookSmall">&#8220;You are welcome, most noble Sorceress, to the land of the Munchkins. We are so grateful to you for having killed the Wicked Witch of the East, and for setting our people free from bondage.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Dorothy listened to this speech with wonder.  What could the little woman possibly mean by calling her a sorceress, and saying she had killed the Wicked Witch of the East?  Dorothy was an innocent, harmless little girl, who had been carried by a cyclone many miles from home; and she had never killed anything in all her life.
+                                    </p>
+                                    <p class="pBookSmall">But the little woman evidently expected her to answer; so Dorothy said, with hesitation, &#8220;You are very kind, but there must be some mistake.  I have not killed anything.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Your house did, anyway,&#8221; replied the little old woman, with a laugh, &#8220;and that is the same thing.  See!&#8221; she continued, pointing to the corner of the house.  &#8220;There are her two feet, still sticking out from under a block of wood.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Dorothy looked, and gave a little cry of fright.  There, indeed, just under the corner of the great beam the house rested on, two feet were sticking out, shod in silver shoes with pointed toes.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Oh, dear!  Oh, dear!&#8221; cried Dorothy, clasping her hands together in dismay.  &#8220;The house must have fallen on her.  Whatever shall we do?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;There is nothing to be done,&#8221; said the little woman calmly.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;But who was she?&#8221; asked Dorothy.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;She was the Wicked Witch of the East, as I said,&#8221; answered the little woman.  &#8220;She has held all the Munchkins in bondage for many years, making them slave for her night and day.  Now they are all set free, and are grateful to you for the favor.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Who are the Munchkins?&#8221; inquired Dorothy.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;They are the people who live in this land of the East  where the Wicked Witch ruled.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Are you a Munchkin?&#8221; asked Dorothy.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;No, but I am their friend, although I live in the land of the North. When they saw the Witch of the East was dead the Munchkins sent a swift messenger to me, and I came at once.  I am the Witch of the North.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Oh, gracious!&#8221; cried Dorothy.  &#8220;Are you a real witch?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Yes, indeed,&#8221; answered the little woman.  &#8220;But I am a good witch, and the people love me.  I am not as powerful as the Wicked Witch was who ruled here, or I should have set the people free myself.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;But I thought all witches were wicked,&#8221; said the girl, who was half frightened at facing a real witch.  &#8220;Oh, no, that is a great mistake. There were only four witches in all the Land of Oz, and two of them, those who live in the North and the South, are good witches.  I know this is true, for I am one of them myself, and cannot be mistaken. Those who dwelt in the East and the West were, indeed, wicked witches; but now that you have killed one of them, there is but one Wicked Witch in all the Land of Oz&#8212;the one who lives in the West.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;But,&#8221; said Dorothy, after a moment&#8217;s thought, &#8220;Aunt Em has told me that the witches were all dead&#8212;years and years ago.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Who is Aunt Em?&#8221; inquired the little old woman.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;She is my aunt who lives in Kansas, where I came from.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">The Witch of the North seemed to think for a time, with her head bowed and her eyes upon the ground.  Then she looked up and said, &#8220;I do not know where Kansas is, for I have never heard that country mentioned before.  But tell me, is it a civilized country?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Oh, yes,&#8221; replied Dorothy.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Then that accounts for it.  In the civilized countries I believe there are no witches left, nor wizards, nor sorceresses, nor magicians.  But, you see, the Land of Oz has never been civilized, for we are cut off from all the rest of the world.  Therefore we still have witches and wizards amongst us.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Who are the wizards?&#8221; asked Dorothy.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Oz himself is the Great Wizard,&#8221; answered the Witch, sinking her voice to a whisper.  &#8220;He is more powerful than all the rest of us together. He lives in the City of Emeralds.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Dorothy was going to ask another question, but just then the Munchkins, who had been standing silently by, gave a loud shout and pointed to the corner of the house where the Wicked Witch had been lying.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;What is it?&#8221; asked the little old woman, and looked, and began to laugh.  The feet of the dead Witch had disappeared entirely, and nothing was left but the silver shoes.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;She was so old,&#8221; explained the Witch of the North, &#8220;that she dried up quickly in the sun.  That is the end of her.  But the silver shoes are yours, and you shall have them to wear.&#8221; She reached down and picked up the shoes, and after shaking the dust out of them handed them to Dorothy.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;The Witch of the East was proud of those silver shoes,&#8221; said one of the Munchkins, &#8220;and there is some charm connected with them; but what it is we never knew.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Dorothy carried the shoes into the house and placed them on the table. Then she came out again to the Munchkins and said:
+                                    </p>
+                                    <p class="pBookSmall">&#8220;I am anxious to get back to my aunt and uncle, for I am sure they will worry about me.  Can you help me find my way?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">The Munchkins and the Witch first looked at one another, and then at Dorothy, and then shook their heads.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;At the East, not far from here,&#8221; said one, &#8220;there is a great desert, and none could live to cross it.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;It is the same at the South,&#8221; said another, &#8220;for I have been there and seen it.  The South is the country of the Quadlings.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;I am told,&#8221; said the third man, &#8220;that it is the same at the West.  And that country, where the Winkies live, is ruled by the Wicked Witch of the West, who would make you her slave if you passed her way.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;The North is my home,&#8221; said the old lady, &#8220;and at its edge is the same great desert that surrounds this Land of Oz.  I&#8217;m afraid, my dear, you will have to live with us.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Dorothy began to sob at this, for she felt lonely among all these strange people.  Her tears seemed to grieve the kind-hearted Munchkins, for they immediately took out their handkerchiefs and began to weep also.  As for the little old woman, she took off her cap and balanced the point on the end of her nose, while she counted &#8220;One, two, three&#8221; in a solemn voice.  At once the cap changed to a slate, on which was written in big, white chalk marks:
+                                    </p>
+                                    <p class="pBookSmall"> &#8220;LET DOROTHY GO TO THE CITY OF EMERALDS&#8221;
+                                    </p>
+                                    <p class="pBookSmall">The little old woman took the slate from her nose, and having read the words on it, asked, &#8220;Is your name Dorothy, my dear?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Yes,&#8221; answered the child, looking up and drying her tears.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Then you must go to the City of Emeralds.  Perhaps Oz will help you.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Where is this city?&#8221; asked Dorothy.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;It is exactly in the center of the country, and is ruled by Oz, the Great Wizard I told you of.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Is he a good man?&#8221; inquired the girl anxiously.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;He is a good Wizard.  Whether he is a man or not I cannot tell, for I have never seen him.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;How can I get there?&#8221; asked Dorothy.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;You must walk.  It is a long journey, through a country that is sometimes pleasant and sometimes dark and terrible.  However, I will use all the magic arts I know of to keep you from harm.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Won&#8217;t you go with me?&#8221; pleaded the girl, who had begun to look upon the little old woman as her only friend.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;No, I cannot do that,&#8221; she replied, &#8220;but I will give you my kiss, and no one will dare injure a person who has been kissed by the Witch of the North.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">She came close to Dorothy and kissed her gently on the forehead.  Where her lips touched the girl they left a round, shining mark, as Dorothy found out soon after.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;The road to the City of Emeralds is paved with yellow brick,&#8221; said the Witch, &#8220;so you cannot miss it.  When you get to Oz do not be afraid of him, but tell your story and ask him to help you.  Good-bye, my dear.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">The three Munchkins bowed low to her and wished her a pleasant journey, after which they walked away through the trees.  The Witch gave Dorothy a friendly little nod, whirled around on her left heel three times, and straightway disappeared, much to the surprise of little Toto, who barked after her loudly enough when she had gone, because he had been afraid even to growl while she stood by.
+                                    </p>
+                                    <p class="pBookSmall">But Dorothy, knowing her to be a witch, had expected her to disappear in just that way, and was not surprised in the least.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="tab5" class="tab_content">
+                                <div class="eReaderHTMLpage">
+                                    <h1 class="chapterTitle" style="color:#D9B909;">How Dorothy Saved the Scarecrow</h1>
+                                    <p class="pBookSmallNoIndent">
+                                        When Dorothy was left alone she began to feel hungry.  So she went to the cupboard and cut herself some bread, which she spread with butter. She gave some to Toto, and taking a pail from the shelf she carried it down to the little brook and filled it with clear, sparkling water. Toto ran over to the trees and began to bark at the birds sitting there.  Dorothy went to get him, and saw such delicious fruit hanging from the branches that she gathered some of it, finding it just what she wanted to help out her breakfast.
+                                    </p>
+                                    <p class="pBookSmall">Then she went back to the house, and having helped herself and Toto to a good drink of the cool, clear water, she set about making ready for the journey to the City of Emeralds.
+                                    </p>
+                                    <p class="pBookSmall">Dorothy had only one other dress, but that happened to be clean and was hanging on a peg beside her bed.  It was gingham, with checks of white and blue; and although the blue was somewhat faded with many washings, it was still a pretty frock.  The girl washed herself carefully, dressed herself in the clean gingham, and tied her pink sunbonnet on her head.  She took a little basket and filled it with bread from the cupboard, laying a white cloth over the top.  Then she looked down at her feet and noticed how old and worn her shoes were.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;They surely will never do for a long journey, Toto,&#8221; she said.  And Toto looked up into her face with his little black eyes and wagged his tail to show he knew what she meant.
+                                    </p>
+                                    <p class="pBookSmall">At that moment Dorothy saw lying on the table the silver shoes that had belonged to the Witch of the East.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;I wonder if they will fit me,&#8221; she said to Toto.  &#8220;They would be just the thing to take a long walk in, for they could not wear out.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">She took off her old leather shoes and tried on the silver ones, which fitted her as well as if they had been made for her.
+                                    </p>
+                                    <p class="pBookSmall">Finally she picked up her basket.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Come along, Toto,&#8221; she said.  &#8220;We will go to the Emerald City and ask the Great Oz how to get back to Kansas again.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">She closed the door, locked it, and put the key carefully in the pocket of her dress.  And so, with Toto trotting along soberly behind her, she started on her journey.
+                                    </p>
+                                    <p class="pBookSmall">There were several roads near by, but it did not take her long to find the one paved with yellow bricks.  Within a short time she was walking briskly toward the Emerald City, her silver shoes tinkling merrily on the hard, yellow road-bed.  The sun shone bright and the birds sang sweetly, and Dorothy did not feel nearly so bad as you might think a little girl would who had been suddenly whisked away from her own country and set down in the midst of a strange land.
+                                    </p>
+                                    <p class="pBookSmall">She was surprised, as she walked along, to see how pretty the country was about her.  There were neat fences at the sides of the road, painted a dainty blue color, and beyond them were fields of grain and vegetables in abundance.  Evidently the Munchkins were good farmers and able to raise large crops.  Once in a while she would pass a house, and the people came out to look at her and bow low as she went by; for everyone knew she had been the means of destroying the Wicked Witch and setting them free from bondage.  The houses of the Munchkins were odd-looking dwellings, for each was round, with a big dome for a roof. All were painted blue, for in this country of the East blue was the favorite color.
+                                    </p>
+                                    <p class="pBookSmall">Toward evening, when Dorothy was tired with her long walk and began to wonder where she should pass the night, she came to a house rather larger than the rest.  On the green lawn before it many men and women were dancing.  Five little fiddlers played as loudly as possible, and the people were laughing and singing, while a big table near by was loaded with delicious fruits and nuts, pies and cakes, and many other good things to eat.
+                                    </p>
+                                    <p class="pBookSmall">The people greeted Dorothy kindly, and invited her to supper and to pass the night with them; for this was the home of one of the richest Munchkins in the land, and his friends were gathered with him to celebrate their freedom from the bondage of the Wicked Witch.
+                                    </p>
+                                    <p class="pBookSmall">Dorothy ate a hearty supper and was waited upon by the rich Munchkin himself, whose name was Boq.  Then she sat upon a settee and watched the people dance.
+                                    </p>
+                                    <p class="pBookSmall">When Boq saw her silver shoes he said, &#8220;You must be a great sorceress.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Why?&#8221; asked the girl.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Because you wear silver shoes and have killed the Wicked Witch. Besides, you have white in your frock, and only witches and sorceresses wear white.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;My dress is blue and white checked,&#8221; said Dorothy, smoothing out the wrinkles in it.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;It is kind of you to wear that,&#8221; said Boq.  &#8220;Blue is the color of the Munchkins, and white is the witch color.  So we know you are a friendly witch.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Dorothy did not know what to say to this, for all the people seemed to think her a witch, and she knew very well she was only an ordinary little girl who had come by the chance of a cyclone into a strange land.
+                                    </p>
+                                    <p class="pBookSmall">When she had tired watching the dancing, Boq led her into the house, where he gave her a room with a pretty bed in it.  The sheets were made of blue cloth, and Dorothy slept soundly in them till morning, with Toto curled up on the blue rug beside her.
+                                    </p>
+                                    <p class="pBookSmall">She ate a hearty breakfast, and watched a wee Munchkin baby, who played with Toto and pulled his tail and crowed and laughed in a way that greatly amused Dorothy.  Toto was a fine curiosity to all the people, for they had never seen a dog before.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;How far is it to the Emerald City?&#8221; the girl asked.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;I do not know,&#8221; answered Boq gravely, &#8220;for I have never been there. It is better for people to keep away from Oz, unless they have business with him.  But it is a long way to the Emerald City, and it will take you many days.  The country here is rich and pleasant, but you must pass through rough and dangerous places before you reach the end of your journey.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">This worried Dorothy a little, but she knew that only the Great Oz could help her get to Kansas again, so she bravely resolved not to turn back.
+                                    </p>
+                                    <p class="pBookSmall">She bade her friends good-bye, and again started along the road of yellow brick.  When she had gone several miles she thought she would stop to rest, and so climbed to the top of the fence beside the road and sat down.  There was a great cornfield beyond the fence, and not far away she saw a Scarecrow, placed high on a pole to keep the birds from the ripe corn.
+                                    </p>
+                                    <p class="pBookSmall">Dorothy leaned her chin upon her hand and gazed thoughtfully at the Scarecrow.  Its head was a small sack stuffed with straw, with eyes, nose, and mouth painted on it to represent a face.  An old, pointed blue hat, that had belonged to some Munchkin, was perched on his head, and the rest of the figure was a blue suit of clothes, worn and faded, which had also been stuffed with straw.  On the feet were some old boots with blue tops, such as every man wore in this country, and the figure was raised above the stalks of corn by means of the pole stuck up its back.
+                                    </p>
+                                    <p class="pBookSmall">While Dorothy was looking earnestly into the queer, painted face of the Scarecrow, she was surprised to see one of the eyes slowly wink at her. She thought she must have been mistaken at first, for none of the scarecrows in Kansas ever wink; but presently the figure nodded its head to her in a friendly way.  Then she climbed down from the fence and walked up to it, while Toto ran around the pole and barked.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Good day,&#8221; said the Scarecrow, in a rather husky voice.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Did you speak?&#8221; asked the girl, in wonder.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Certainly,&#8221; answered the Scarecrow.  &#8220;How do you do?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;I&#8217;m pretty well, thank you,&#8221; replied Dorothy politely.  &#8220;How do you do?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;I&#8217;m not feeling well,&#8221; said the Scarecrow, with a smile, &#8220;for it is very tedious being perched up here night and day to scare away crows.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Can&#8217;t you get down?&#8221; asked Dorothy.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;No, for this pole is stuck up my back.  If you will please take away the pole I shall be greatly obliged to you.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Dorothy reached up both arms and lifted the figure off the pole, for, being stuffed with straw, it was quite light.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Thank you very much,&#8221; said the Scarecrow, when he had been set down on the ground.  &#8220;I feel like a new man.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">Dorothy was puzzled at this, for it sounded queer to hear a stuffed man speak, and to see him bow and walk along beside her.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Who are you?&#8221; asked the Scarecrow when he had stretched himself and yawned.  &#8220;And where are you going?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;My name is Dorothy,&#8221; said the girl, &#8220;and I am going to the Emerald City, to ask the Great Oz to send me back to Kansas.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Where is the Emerald City?&#8221; he inquired.  &#8220;And who is Oz?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Why, don&#8217;t you know?&#8221; she returned, in surprise.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;No, indeed.  I don&#8217;t know anything.  You see, I am stuffed, so I have no brains at all,&#8221; he answered sadly.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Oh,&#8221; said Dorothy, &#8220;I&#8217;m awfully sorry for you.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Do you think,&#8221; he asked, &#8220;if I go to the Emerald City with you, that Oz would give me some brains?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;I cannot tell,&#8221; she returned, &#8220;but you may come with me, if you like. If Oz will not give you any brains you will be no worse off than you are now.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;That is true,&#8221; said the Scarecrow.  &#8220;You see,&#8221; he continued confidentially, &#8220;I don&#8217;t mind my legs and arms and body being stuffed, because I cannot get hurt.  If anyone treads on my toes or sticks a pin into me, it doesn&#8217;t matter, for I can&#8217;t feel it.  But I do not want people to call me a fool, and if my head stays stuffed with straw instead of with brains, as yours is, how am I ever to know anything?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;I understand how you feel,&#8221; said the little girl, who was truly sorry for him.  &#8220;If you will come with me I&#8217;ll ask Oz to do all he can for you.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Thank you,&#8221; he answered gratefully.
+                                    </p>
+                                    <p class="pBookSmall">They walked back to the road.  Dorothy helped him over the fence, and they started along the path of yellow brick for the Emerald City.
+                                    </p>
+                                    <p class="pBookSmall">Toto did not like this addition to the party at first.  He smelled around the stuffed man as if he suspected there might be a nest of rats in the straw, and he often growled in an unfriendly way at the Scarecrow.
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Don&#8217;t mind Toto,&#8221; said Dorothy to her new friend.  &#8220;He never bites.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;Oh, I&#8217;m not afraid,&#8221; replied the Scarecrow.  &#8220;He can&#8217;t hurt the straw. Do let me carry that basket for you.  I shall not mind it, for I can&#8217;t get tired.  I&#8217;ll tell you a secret,&#8221; he continued, as he walked along. &#8220;There is only one thing in the world I am afraid of.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;What is that?&#8221; asked Dorothy; &#8220;the Munchkin farmer who made you?&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#8220;No,&#8221; answered the Scarecrow; &#8220;it&#8217;s a lighted match.&#8221;
+                                    </p>
+                                    <p class="pBookSmall">&#160;</p>
+                                    <p class="pBookSmallNoIndent">End of chapter, end of sample.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <script type="text/javascript" src="../pageBottom.js"></script>
+            </div>
+        </div>
+
+    </body>
+</html>

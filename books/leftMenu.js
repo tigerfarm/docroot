@@ -1,0 +1,27 @@
+// Books item list
+document.write('<div class="navtitleH1">Books</div>');
+document.write('<hr/>');
+document.write('<ul class="navlist">');
+document.write('<li> <a href="Published.html">Published Books</a></li>');
+document.write('</ul>');
+document.write('<hr/>');
+document.write('<span class="navtitle">My Books</span>');
+document.write('<ul class="navlist">');
+document.write('<li> <a href="SunOne.html">Getting Started with Sun One</a></li>');
+document.write('<li> <a href="Journeys.html">Journeys: A Peninsula Writers Bloc Anthology</a></li>');
+document.write('<li> <a href="Scrooge.html">Scrooge, American Style</a></li>');
+document.write('</ul>');
+document.write('<br/>&nbsp;');
+document.write('<span class="navtitle">Public Domain</span> <img src="../images/downloadIcon.png" alt="[download]" />');
+document.write('<ul class="navlist">');
+document.write('<li> <a href="Persuasion.html">Persuasion</a></li>');
+document.write('<li> <a href="WizardOfOz.html">The Wonderful Wizard of Oz</a></li>');
+document.write('<li> <a href="SleepyHollow.html">The Legend of Sleepy Hollow</a></li>');
+document.write('</ul>');
+document.write('<hr/>');
+document.write('<span class="navtitle">Book Topics</span>');
+document.write('<ul class="navlist">');
+document.write('<li> <a href="eReaders.html">eBook Readers</a></li>');
+document.write('<li> <a href="PublicDomain.html">About Public Domain Books</a></li>');
+document.write('</ul>');
+document.write('<hr/>');
