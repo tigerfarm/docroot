@@ -3,8 +3,14 @@ Company web site CSS style sheet.
 Created by Stacy Thurston Sept.29,2012
 */
 
-/* Text elements */
+/* Text elements 
 body,th,td,p,div,span,a,input,select,textarea,li,notelist{
+    font-family: Arial, Helvetica, FreeSans, "Luxi-sans", "Nimbus Sans L", sans-serif;
+    background: white;
+    margin: 0 0px 0 0px;
+}
+*/
+body,th,td,div,span,a,input,select,textarea,notelist{
     font-family: Arial, Helvetica, FreeSans, "Luxi-sans", "Nimbus Sans L", sans-serif;
     background: white;
     margin: 0 0px 0 0px;

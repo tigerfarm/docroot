@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>TFP blog</title>
+        <link href="../images/favicontfp.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="../styles.css" rel="stylesheet" type="text/css"/>
+        <link href="../jqStyles.css" rel="stylesheet" type="text/css"/>
+        <!-- Note, script order is important! -->
+        <script src="../js/jquery310.js" type="text/javascript"></script>
+        <script src="../js/jqueryTFP.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="outerBorder">
+            <script type="text/javascript" src="../pageTop.js"></script>
+            <div class="main">
+                <div class="leftSidebar">
+                    <div class="navtitle">Blog</div>
+                    <script type="text/javascript" src="../about/leftMenu.js"></script>
+                    <script type="text/javascript" src="leftMenu.js"></script>
+                </div>
+                <div class="contentLong">
+                    <h1>Website Typeset</h1>
+                    <p class="navhome">August 31, 2016</p>
+                    <p class="paraReglar">
+                        Fonts, headings, and other type settings defined in
+                        <span class="filename"><a href="../style.css">style.css</a></span>.
+                    </p>
+
+                    <hr>
+                    <h1>&lt;h1&gt;Heading&lt;/h1&gt;</h1>
+                    <h2>&lt;h2&gt;Heading&lt;/h2&gt;</h2>
+                    <h3>&lt;h3&gt;Heading&lt;/h3&gt;</h3>
+                    <h4>&lt;h4&gt;Heading&lt;/h4&gt;</h4>
+                    <h5>&lt;h5&gt;Heading&lt;/h5&gt;</h5>
+
+                    <hr>
+                    Filename: <span class="filename">&lt;DBServer-public-dns-name&gt;</span>
+                    <pre class="examplecode">Filename: &lt;span class="filename"&gt;&amp;lt;DBServer-public-dns-name&amp;gt;&lt;/span&gt;</pre>
+
+                    <hr>
+                    <p>Command with text: <span class="command">cd /opt</span>
+                    <pre class="examplecode">Command with text: &lt;span class="command"&gt;cd /opt&lt;/span&gt;</pre>
+                    <p>Sample code command:</p>
+                    <pre class="examplecode"># <span class="command">cd /opt</span></pre>
+                    <pre class="examplecode">&lt;pre class="examplecode"># &lt;span class="command"&gt;/opt&lt;/span&gt;&lt;/pre&gt;</pre>
+
+                    <hr>
+                    <p>Note list</p>
+                    <ul class="notelist">
+                        <li class="notelistTitle">Title: notelistTitle
+                        <li>List item: no style class
+                        <li class="notelistIndent">Sub item: notelistIndent
+                        <li class="notelistTitle">Another title.
+                        <li class="noteLast">Special last item: noteLast, has a bottom margin.
+                    </ul>
+                    <pre class="examplecode">&lt;ul class="notelist"&gt;
+    &lt;li class="notelistTitle"&gt;Title: notelistTitle
+    &lt;li&gt;List item: no style class
+    &lt;li class="notelistIndent"&gt;Sub item: notelistIndent
+    &lt;li class="notelistTitle"&gt;Another title.
+    &lt;li class="noteLast"&gt;Special last item: noteLast, has a bottom margin.
+&lt;/ul&gt;</pre>
+
+                    <hr>
+                    <i>Report Table</i>
+<div class="TfpInvest">
+<h2>Account Portfolio Report</h2>
+<table class="reportTable">
+<tr><th style="width:100px">Ticker</th><th>Unit Price</th><th>Quantity</th></tr>
+<tr><td>FLPKX</td><td class="rptNumber">48.5</td><td class='rptNumber'>9420.52</td></tr>
+<tr><td>LZEMX</td><td class="rptNumber">16.7</td><td class='rptNumber'>4789.26</td></tr>
+</table>
+</div>
+                    <pre class="examplecode">&lt;div class="TfpInvest"&gt;
+&lt;h2&gt;Account Portfolio Report&lt;/h2&gt;
+&lt;table class="reportTable"&gt;
+    &lt;tr&gt;&lt;th style="width:100px"&gt;Ticker&lt;/th&gt;&lt;th&gt;Unit Price&lt;/th&gt;&lt;th&gt;Quantity&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;FLPKX&lt;/td&gt;&lt;td class="rptNumber"&gt;48.5&lt;/td&gt;&lt;td class="rptNumber"&gt;9420.52&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;LZEMX&lt;/td&gt;&lt;td class="rptNumber"&gt;16.7&lt;/td&gt;&lt;td class="rptNumber"&gt;4789.26&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;</pre>
+                    <hr>
+                    <i>Table 6 GlassFish Enterprise Server Settings</i>
+                    <table class="tableList">
+                        <tr>
+                            <th> Option </th>
+                            <th> [Default Value] </th>
+                            <th> Enter: </th>
+                        </tr>
+                        <tr>
+                            <td> Installation Directory </td>
+                            <td> [/opt/SUNWappserver] </td>
+                            <td> <span class="command">/opt/appserverCreate</span> </td>
+                        </tr>
+                        <tr>
+                            <td> Create Directory or Choose New </td>
+                            <td> Create Directory </td>
+                            <td> <em>accept default</em> </td>
+                        </tr>
+                    </table>
+                    <pre class="examplecode">&lt;i&gt;Table 6 GlassFish Enterprise Server Settings&lt;/i&gt;
+&lt;table class="tableList"&gt;
+    &lt;tr&gt;
+        &lt;th&gt; Option &lt;/th&gt;
+        &lt;th&gt; [Default Value] &lt;/th&gt;
+        &lt;th&gt; Enter: &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; Installation Directory &lt;/td&gt;
+        &lt;td&gt; [/opt/SUNWappserver] &lt;/td&gt;
+        &lt;td&gt; &lt;span class="command"&gt;/opt/appserverCreate&lt;/span&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; Create Directory or Choose New &lt;/td&gt;
+        &lt;td&gt; Create Directory &lt;/td&gt;
+        &lt;td&gt; &lt;em&gt;accept default&lt;/em&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+                    <hr>
+                    <h3>Tip</h3>
+                    <h4>Sample</h4>
+                    <p class="tip"><b>Tip:</b>
+                        To help the the weak and weary.
+                    </p>
+                    <pre class="examplecode">
+        &lt;p class="tip"&gt;&lt;b&gt;Tip:&lt;/b&gt;
+           To help the the weak and weary.
+        &lt;/p&gt;</pre>
+
+                    <h3>Notes</h3>
+                    <p class="tip"><b>Note:</b>
+                        <br>1. To help the the weak and weary.
+                        <br>2. Only the good die young.
+                    </p>
+                    <pre class="examplecode">
+        &lt;p class="tip"&gt;&lt;b&gt;Note:&lt;/b&gt;
+           &lt;br&gt;1. To help the the weak and weary.
+           &lt;br&gt;2. Only the good die young.
+        &lt;/p&gt;</pre>
+
+                    <h3>steplist</h3>
+                    <ol class="steplist">
+                        <li>item 1...</li>
+                        <li>item 2...</li>
+                        <li>item 3...</li>
+                    </ol>
+                    <pre class="examplecode">
+        &lt;ol class="steplist"&gt;
+           &lt;li&gt;item 1...&lt;/li&gt;
+           &lt;li&gt;item 2...&lt;/li&gt;
+           &lt;li&gt;item 3...&lt;/li&gt;
+        &lt;/ol&gt;</pre>
+
+                    <h3>listtable:</h3>
+                    <table class="listtable" width="75%" cellspacing="1">
+                        <tbody>
+                            <tr>
+                                <td>&lt;ELB-instance-name&gt;</td>
+                                <td>Name of your Elastic Load Balancer instance</td>
+                            </tr>
+                            <tr>
+                                <td><span class="filename">--target</span></td>
+                                <td>Path to file to ping, starting with the protocol and port number</td>
+                            </tr>
+                            <tr>
+                                <td><span class="filename">--interval</span></td>
+                                <td>Number of seconds between health checks</td>
+                            </tr>
+                            <tr>
+                                <td><span class="filename">--timeout</span></td>
+                                <td>Number of seconds to wait for the server's response</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <pre class="examplecode">
+        &lt;table class="listtable" width="75%" cellspacing="1"&gt;
+           &lt;tbody&gt;
+              &lt;tr&gt;
+                 &lt;td&gt;&lt;ELB-instance-name&gt;&lt;/td&gt;
+                 &lt;td&gt;Name of your Elastic Load Balancer instance&lt;/td&gt;
+              &lt;/tr&gt;
+              ...
+           &lt;/tbody&gt;
+        &lt;/table&gt;</pre>
+
+                    <div id="tab5" class="tab_content">
+                        <div class="eReaderHTMLpageLab">
+                            <h3>Title</h3>
+                            <p>
+                                Steps:
+                            </p>
+                            <ol>
+                                <li>abc
+                            </ol>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <script type="text/javascript" src="../pageBottom.js"></script>
+            </div>
+
+        </div>
+    </body>
+</html>
