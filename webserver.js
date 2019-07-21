@@ -1,9 +1,30 @@
 // -----------------------------------------------------------------------------
 console.log("+ Start.");
 
+var path = require("path");
+
 // $ npm install --save express
 const express = require('express');
 var app = express();
+
+// -----------------------------------------------------------------------------
+function runPhpProgram(theProgramName, theParameters, response) {
+    console.log("+ Run: " + theProgramName + theParameters);
+    const theProgram = 'php ' + path.join(process.cwd(), theProgramName) + theParameters;
+    const exec = require('child_process').exec;
+    exec(theProgram, (error, stdout, stderr) => {
+        theResponse = `${stdout}`;
+        console.log('+ theResponse: ' + theResponse);
+        if (error !== null) {
+            console.log(`exec error: ${error}`);
+        }
+        response.send(theResponse);
+    });
+}
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// tigsync
 
 // $ npm install --save twilio
 var AccessToken = require('twilio').jwt.AccessToken;
@@ -23,11 +44,11 @@ var syncDocumentUniqueName = '';
 var syncDataValuePosition = '';
 var syncDataValue = '';
 
-const aClearBoard = [['', '', ''],['', '', ''],['', '', '']];
+const aClearBoard = [['', '', ''], ['', '', ''], ['', '', '']];
 
 function updateGameBoard(currentBoard) {
     console.log("++ updateGameBoard, currentBoard: " + JSON.stringify(currentBoard));
-    var boardSquares = [['', '', ''],['', '', ''],['', '', '']];
+    var boardSquares = [['', '', ''], ['', '', ''], ['', '', '']];
     for (var row = 0; row < 3; row++) {
         for (var col = 0; col < 3; col++) {
             if (theRow === row && theColumn === col) {
@@ -176,6 +197,31 @@ app.get('/token', function (request, response) {
 });
 
 // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// tigcall
+
+app.get('/tigcall/generateToken.php', function (req, response) {
+    runPhpProgram(
+            '/docroot/tigcall/generateToken.php',
+            " " + req.query.clientid + " " + req.query.tokenpassword,
+            response);
+    return;
+});
+
+app.get('/tigcall/accountNumberList.php', function (request, response) {
+    runPhpProgram('/docroot/tigcall/accountNumberList.php', '', response);
+    return;
+});
+
+app.get('/tigcall/accountPhoneNumbers.php', function (request, response) {
+    runPhpProgram('/docroot/tigcall/accountPhoneNumbers.php', '', response);
+    return;
+});
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// Other
+
 app.get('/hello', function (req, res) {
     console.log("+ Request: /hello");
     if (req.query.username) {
