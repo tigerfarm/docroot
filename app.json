@@ -6,10 +6,10 @@
     "keywords": ["node", "express", "heroku", "Twilio", "sync", "sms", "voice"],
     "buildpacks": [
         {
-            "url": "heroku/nodejs"
+            "url": "heroku/php"
         },
         {
-            "url": "heroku/php"
+            "url": "heroku/nodejs"
         }
     ]
 }
