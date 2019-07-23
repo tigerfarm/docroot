@@ -3,8 +3,8 @@
         "heroku/heroku-buildpack-php": "*"
     },
     "scripts": {
-        "start": [
-            "node webserver.js"
+        "compile": [
+            "bower install"
         ]
     }
 }
