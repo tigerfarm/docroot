@@ -28,7 +28,7 @@ function runPhpProgram(theProgramName, theParameters, response) {
 
 app.get('/tigsms/sendSms.php', function (request, response) {
     runPhpProgram(
-            '/docroot/tigsms/sendSms.php',
+            '/tigsms/sendSms.php',
             " " + request.query.msgFrom + " " + request.query.msgTo
             + " '" + request.query.msgBody + "' " + request.query.smsPassword,
             response);
@@ -36,25 +36,25 @@ app.get('/tigsms/sendSms.php', function (request, response) {
     return;
 });
 app.get('/tigsms/smsListSenderFilter.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsListSenderFilter.php',
+    runPhpProgram('/tigsms/smsListSenderFilter.php',
             request.query.msgFrom + " " + request.query.smsPassword,
             response);
     return;
 });
 app.get('/tigsms/smsListSenderFilterDelete.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsListSenderFilterDelete.php',
+    runPhpProgram('/tigsms/smsListSenderFilterDelete.php',
             request.query.msgFrom + " " + request.query.smsPassword,
             response);
     return;
 });
 app.get('/tigsms/smsConversation.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsConversation.php',
+    runPhpProgram('/tigsms/smsConversation.php',
             request.query.msgFrom + " " + request.query.msgTo,
             response);
     return;
 });
 app.get('/tigsms/smsConversationDelete.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsConversationDelete.php',
+    runPhpProgram('/tigsms/smsConversationDelete.php',
             request.query.msgFrom + " " + request.query.msgTo,
             response);
     return;
@@ -62,19 +62,19 @@ app.get('/tigsms/smsConversationDelete.php', function (request, response) {
 
 // ------------
 app.get('/tigsms/smsListDateFilter.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsListDateFilter.php', '', response);
+    runPhpProgram('/tigsms/smsListDateFilter.php', '', response);
     return;
 });
 app.get('/tigsms/smsListDateFilterDelete.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsListDateFilterDelete.php', '', response);
+    runPhpProgram('/tigsms/smsListDateFilterDelete.php', '', response);
     return;
 });
 app.get('/tigsms/accountNumberList.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/accountNumberList.php', '', response);
+    runPhpProgram('/tigsms/accountNumberList.php', '', response);
     return;
 });
 app.get('/tigsms/accountNumberList.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/accountNumberList.php', '', response);
+    runPhpProgram('/tigsms/accountNumberList.php', '', response);
     return;
 });
 
@@ -84,19 +84,19 @@ app.get('/tigsms/accountNumberList.php', function (request, response) {
 
 app.get('/tigcall/generateToken.php', function (req, response) {
     runPhpProgram(
-            '/docroot/tigcall/generateToken.php',
+            '/tigcall/generateToken.php',
             " " + req.query.clientid + " " + req.query.tokenpassword,
             response);
     return;
 });
 
 app.get('/tigcall/accountNumberList.php', function (request, response) {
-    runPhpProgram('/docroot/tigcall/accountNumberList.php', '', response);
+    runPhpProgram('/tigcall/accountNumberList.php', '', response);
     return;
 });
 
 app.get('/tigcall/accountPhoneNumbers.php', function (request, response) {
-    runPhpProgram('/docroot/tigcall/accountPhoneNumbers.php', '', response);
+    runPhpProgram('/tigcall/accountPhoneNumbers.php', '', response);
     return;
 });
 
@@ -290,7 +290,7 @@ app.get('/hello', function (req, res) {
 // -----------------------------------------------------------------------------
 // Serve static web pages
 //
-app.use(express.static('docroot'));
+app.use(express.static('.'));
 app.use(function (err, req, res, next) {
     console.error(err.stack);
     res.status(500).send('HTTP Error 500.');
