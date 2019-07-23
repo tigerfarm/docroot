@@ -24,6 +24,77 @@ function runPhpProgram(theProgramName, theParameters, response) {
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
+// tigsms
+
+// To add parameters:
+app.get('/tigsms/sendSms.php', function (request, response) {
+    runPhpProgram(
+            '/docroot/tigsms/sendSms.php',
+            " " + request.query.msgFrom + " " + request.query.msgTo
+            + " '" + request.query.msgBody + "' " + request.query.smsPassword,
+            response);
+
+    return;
+});
+app.get('/tigsms/smsListSenderFilter.php', function (request, response) {
+    runPhpProgram('/docroot/tigsms/smsListSenderFilter.php', '', response);
+    return;
+});
+app.get('/tigsms/smsListSenderFilterDelete.php', function (request, response) {
+    runPhpProgram('/docroot/tigsms/smsListSenderFilterDelete.php', '', response);
+    return;
+});
+app.get('/tigsms/smsConversation.php', function (request, response) {
+    runPhpProgram('/docroot/tigsms/smsConversation.php', '', response);
+    return;
+});
+app.get('/tigsms/smsConversationDelete.php', function (request, response) {
+    runPhpProgram('/docroot/tigsms/smsConversationDelete.php', '', response);
+    return;
+});
+
+// ------------
+app.get('/tigsms/smsListDateFilter.php', function (request, response) {
+    runPhpProgram('/docroot/tigsms/smsListDateFilter.php', '', response);
+    return;
+});
+app.get('/tigsms/smsListDateFilterDelete.php', function (request, response) {
+    runPhpProgram('/docroot/tigsms/smsListDateFilterDelete.php', '', response);
+    return;
+});
+app.get('/tigsms/accountNumberList.php', function (request, response) {
+    runPhpProgram('/docroot/tigsms/accountNumberList.php', '', response);
+    return;
+});
+app.get('/tigsms/accountNumberList.php', function (request, response) {
+    runPhpProgram('/docroot/tigsms/accountNumberList.php', '', response);
+    return;
+});
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// tigcall
+
+app.get('/tigcall/generateToken.php', function (req, response) {
+    runPhpProgram(
+            '/docroot/tigcall/generateToken.php',
+            " " + req.query.clientid + " " + req.query.tokenpassword,
+            response);
+    return;
+});
+
+app.get('/tigcall/accountNumberList.php', function (request, response) {
+    runPhpProgram('/docroot/tigcall/accountNumberList.php', '', response);
+    return;
+});
+
+app.get('/tigcall/accountPhoneNumbers.php', function (request, response) {
+    runPhpProgram('/docroot/tigcall/accountPhoneNumbers.php', '', response);
+    return;
+});
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // tigsync
 
 // $ npm install --save twilio
@@ -194,28 +265,6 @@ app.get('/token', function (request, response) {
     });
     // Reset, which requires the next person to set their identity before getting a token.
     userIdentity = '';
-});
-
-// -----------------------------------------------------------------------------
-// -----------------------------------------------------------------------------
-// tigcall
-
-app.get('/tigcall/generateToken.php', function (req, response) {
-    runPhpProgram(
-            '/docroot/tigcall/generateToken.php',
-            " " + req.query.clientid + " " + req.query.tokenpassword,
-            response);
-    return;
-});
-
-app.get('/tigcall/accountNumberList.php', function (request, response) {
-    runPhpProgram('/docroot/tigcall/accountNumberList.php', '', response);
-    return;
-});
-
-app.get('/tigcall/accountPhoneNumbers.php', function (request, response) {
-    runPhpProgram('/docroot/tigcall/accountPhoneNumbers.php', '', response);
-    return;
 });
 
 // -----------------------------------------------------------------------------
