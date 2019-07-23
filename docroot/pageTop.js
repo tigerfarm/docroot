@@ -24,7 +24,7 @@ document.write('            <a href="/pages/tech.html">Tech</a>');
 document.write('            <a href="/pages/about.html">About</a>');
 document.write('            <hr>');
 document.write('            <a href="/tigsms/index.html">SMS Messaging</a>');
-document.write('            <a href="/tigsms/index.html">Voice calls</a>');
+document.write('            <a href="/tigcall/index.html">Voice calls</a>');
 document.write('            <a href="/tigsync/docroot/index.html">Sync game</a>');
 document.write('            <a href="/tigchat/docroot/index.html">Chat: to be completed</a>');
 document.write('        </div>');
