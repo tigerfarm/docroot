@@ -234,7 +234,6 @@ app.get('/syncdocumentupdate', function (request, response) {
 
 // -----------------------------------------------------------------------------
 app.get('/token', function (request, response) {
-    // Docs: https://www.twilio.com/docs/sync/identity-and-access-tokens
     var userIdentity = '';
     if (request.query.identity) {
         userIdentity = request.query.identity;
