@@ -1,4 +1,8 @@
 {
+    "name": "multitest",
+    "require": {
+        "monolog/monolog": "~1.8"
+    },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*"
     },
