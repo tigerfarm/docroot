@@ -1,6 +1,11 @@
 
 {
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
-  }
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
+    },
+    "scripts": {
+        "start": [
+            "node webserver.js"
+        ]
+    }
 }

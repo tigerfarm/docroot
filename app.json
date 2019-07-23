@@ -1,7 +1,15 @@
 {
-  "name": "Tiger Farm Press Web Application",
-  "description": "Tiger Farm Press web application that include my Twilio sample applications.",
-  "repository": "https://github.com/tigerfarm/tigsync",
-  "logo": "http://tigerfarmpress.com/images/topImgLeft.jpg",
-  "keywords": ["node", "express", "heroku", "Twilio", "sync", "sms", "voice"]
+    "name": "Tiger Farm Press Web Application",
+    "description": "Tiger Farm Press web application that include my Twilio sample applications.",
+    "repository": "https://github.com/tigerfarm/tigsync",
+    "logo": "http://tigerfarmpress.com/images/topImgLeft.jpg",
+    "keywords": ["node", "express", "heroku", "Twilio", "sync", "sms", "voice"],
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "heroku/php"
+        }
+    ]
 }
