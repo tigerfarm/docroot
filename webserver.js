@@ -26,7 +26,6 @@ function runPhpProgram(theProgramName, theParameters, response) {
 // -----------------------------------------------------------------------------
 // tigsms
 
-// To add parameters:
 app.get('/tigsms/sendSms.php', function (request, response) {
     runPhpProgram(
             '/docroot/tigsms/sendSms.php',
@@ -37,19 +36,27 @@ app.get('/tigsms/sendSms.php', function (request, response) {
     return;
 });
 app.get('/tigsms/smsListSenderFilter.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsListSenderFilter.php', '', response);
+    runPhpProgram('/docroot/tigsms/smsListSenderFilter.php',
+            request.query.msgFrom + " " + request.query.smsPassword,
+            response);
     return;
 });
 app.get('/tigsms/smsListSenderFilterDelete.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsListSenderFilterDelete.php', '', response);
+    runPhpProgram('/docroot/tigsms/smsListSenderFilterDelete.php',
+            request.query.msgFrom + " " + request.query.smsPassword,
+            response);
     return;
 });
 app.get('/tigsms/smsConversation.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsConversation.php', '', response);
+    runPhpProgram('/docroot/tigsms/smsConversation.php',
+            request.query.msgFrom + " " + request.query.msgTo,
+            response);
     return;
 });
 app.get('/tigsms/smsConversationDelete.php', function (request, response) {
-    runPhpProgram('/docroot/tigsms/smsConversationDelete.php', '', response);
+    runPhpProgram('/docroot/tigsms/smsConversationDelete.php',
+            request.query.msgFrom + " " + request.query.msgTo,
+            response);
     return;
 });
 
