@@ -30,6 +30,7 @@ var ACCOUNT_SID = process.env.ACCOUNT_SID;
 var CHAT_SERVICE_SID = process.env.CHAT_SERVICE_SID;
 var CHAT_API_KEY = process.env.CHAT_API_KEY;
 var CHAT_API_KEY_SECRET = process.env.CHAT_API_KEY_SECRET;
+const TOKEN_METHOD_ENVIRONMENT_VARIABLES = 'ENV';
 
 function sayMessage(message) {
     console.log(message);
