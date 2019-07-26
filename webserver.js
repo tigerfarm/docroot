@@ -34,6 +34,9 @@ var CHAT_API_KEY_SECRET = process.env.CHAT_API_KEY_SECRET;
 function sayMessage(message) {
     console.log(message);
 }
+function debugMessage(message) {
+    console.log(message);
+}
 function generateToken(theIdentity) {
     // Documentation: https://www.twilio.com/docs/api/rest/access-tokens
     //
