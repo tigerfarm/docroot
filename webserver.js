@@ -62,14 +62,13 @@ function generateToken(theIdentity) {
     return(theToken);
 }
 
-app.get('/generateToken', function (req, res) {
+app.get('/tigchat/docroot/generateToken', function (req, res) {
     sayMessage("+ Generate Chat Token.");
-    if (req.query.identity) {
-        res.send(generateToken(req.query.identity));
-    } else {
+    if (!req.query.identity) {
         sayMessage("- Parameter required: identity.");
         res.send(0);
     }
+    res.send(generateToken(req.query.identity));
 });
 
 // -----------------------------------------------------------------------------
