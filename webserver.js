@@ -24,6 +24,56 @@ function runPhpProgram(theProgramName, theParameters, response) {
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
+// tigchat
+
+var ACCOUNT_SID = process.env.ACCOUNT_SID;
+var CHAT_SERVICE_SID = process.env.CHAT_SERVICE_SID;
+var CHAT_API_KEY = process.env.CHAT_API_KEY;
+var CHAT_API_KEY_SECRET = process.env.CHAT_API_KEY_SECRET;
+
+function generateToken(theIdentity) {
+    // Documentation: https://www.twilio.com/docs/api/rest/access-tokens
+    //
+    if (theIdentity === "") {
+        sayRequirement("Required: user identity for creating a chat token.");
+        doPrompt();
+        return "";
+    }
+    sayMessage("+ Generate token, chat user ID: " + theIdentity);
+    const AccessToken = require('twilio').jwt.AccessToken;
+    // Create a Chat token: https://www.twilio.com/docs/chat/create-tokens
+    const token = new AccessToken(
+            ACCOUNT_SID,
+            CHAT_API_KEY,
+            CHAT_API_KEY_SECRET
+            );
+    // Create a Chat service: https://www.twilio.com/console/chat/services
+    const chatGrant = new AccessToken.ChatGrant({
+        serviceSid: CHAT_SERVICE_SID        // Begins with 'IS'
+    });
+    token.addGrant(chatGrant);
+    token.identity = theIdentity;
+    token.ttl = 1200;          // Token time to live, in seconds. 1200 = 20 minutes.
+    //
+    // Output the token.
+    theToken = token.toJwt();
+    debugMessage("+ theToken " + theToken);
+    TOKEN_METHOD = TOKEN_METHOD_ENVIRONMENT_VARIABLES;
+    return(theToken);
+}
+
+app.get('/generateToken', function (req, res) {
+    sayMessage("+ Generate Chat Token.");
+    if (req.query.identity) {
+        res.send(generateToken(req.query.identity));
+    } else {
+        sayMessage("- Parameter required: identity.");
+        res.send(0);
+    }
+});
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // tigsms
 
 app.get('/tigsms/sendSms.php', function (request, response) {
