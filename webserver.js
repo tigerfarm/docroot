@@ -32,7 +32,6 @@ var CHAT_API_KEY = process.env.CHAT_API_KEY;
 var CHAT_API_KEY_SECRET = process.env.CHAT_API_KEY_SECRET;
 
 function sayMessage(message) {
-    returnMessage = returnMessage + message + "<br>";
     console.log(message);
 }
 function generateToken(theIdentity) {
