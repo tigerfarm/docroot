@@ -12,7 +12,8 @@ window.onload = function () {
     initializePage();
 };
 // document.write('<div id="logBox">');
-document.write('<div id="logBox" style="visibility:hidden;height:0px;margin-top:0px;padding:0px;">');
+// document.write('<div id="logBox" style="visibility:hidden;height:0px;margin-top:0px;padding:0px;">');
+document.write('<div id="logBox" style="visibility: visible;height:0px;margin-top:0px;padding:0px;">');
 document.write('<div class="panelTitle">');
 document.write('    Log messages');
 document.write('</div>');

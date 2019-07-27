@@ -16,12 +16,12 @@ function menubar() {
 
 var ptheBar = 0;
 function pmenuicon() {
-    // logger("+ Clicked menuicon");
+    logger("+ Clicked menuicon");
     document.getElementById("pmenuDropdownItems").classList.toggle("pshow");
 }
 function pmenubar() {
     ptheBar = 1;
-    // logger("+ Clicked menubar");
+    logger("+ Clicked menubar");
 }
 window.onclick = function (e) {
     logger("+ Clicked window 1");
@@ -51,6 +51,12 @@ window.onclick = function (e) {
     }
     theBar = 0;
     ptheBar = 0;
+};
+
+// -----------------------------------------------------------------------------
+window.onload = function () {
+    log.value = "+++ Start.";
+    initializePage();
 };
 
 // -----------------------------------------------------------------------------
