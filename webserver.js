@@ -9,8 +9,8 @@ var app = express();
 
 // -----------------------------------------------------------------------------
 function runPhpProgram(theProgramName, theParameters, response) {
-    console.log("+ Run: " + theProgramName + theParameters);
-    const theProgram = '/app/.heroku/php/bin/php ' + path.join(process.cwd(), theProgramName) + theParameters;
+    const theProgram = '/app/.heroku/php/bin/php ' + path.join(process.cwd(), theProgramName) + " " + theParameters;
+    console.log("+ Run: " + theProgram);
     const exec = require('child_process').exec;
     exec(theProgram, (error, stdout, stderr) => {
         theResponse = `${stdout}`;
@@ -125,12 +125,12 @@ app.get('/tigsms/smsListDateFilterDelete.php', function (request, response) {
     runPhpProgram('/tigsms/smsListDateFilterDelete.php', '', response);
     return;
 });
-app.get('/tigsms/accountNumberList.php', function (request, response) {
-    runPhpProgram('/tigsms/accountNumberList.php', '', response);
+app.get('/tigsms/accountPhoneNumbers.php', function (request, response) {
+    runPhpProgram('/tigsms/accountPhoneNumbers.php', request.query.tokenpassword, response);
     return;
 });
 app.get('/tigsms/accountNumberList.php', function (request, response) {
-    runPhpProgram('/tigsms/accountNumberList.php', '', response);
+    runPhpProgram('/tigsms/accountNumberList.php', request.query.tokenpassword, response);
     return;
 });
 
@@ -147,12 +147,12 @@ app.get('/tigcall/generateToken.php', function (req, response) {
 });
 
 app.get('/tigcall/accountNumberList.php', function (request, response) {
-    runPhpProgram('/tigcall/accountNumberList.php', '', response);
+    runPhpProgram('/tigcall/accountNumberList.php', request.query.tokenpassword, response);
     return;
 });
 
 app.get('/tigcall/accountPhoneNumbers.php', function (request, response) {
-    runPhpProgram('/tigcall/accountPhoneNumbers.php', '', response);
+    runPhpProgram('/tigcall/accountPhoneNumbers.php', request.query.tokenpassword, response);
     return;
 });
 
