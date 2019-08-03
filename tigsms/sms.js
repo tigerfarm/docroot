@@ -242,6 +242,7 @@ function setAccNumbers() {
         });
         $('#accountNumbers option')[0].selected = true; // by default, select the first option.
         $("div#activityMessages").html("+ Account phone numbers loaded.");
+        setButtons("ready");
     }).fail(function () {
         logger("- Get account phone numbers failed.");
     });
@@ -292,11 +293,36 @@ function clearLog() {
     log.value = "+ Ready";
 }
 window.onload = function () {
-    log.value = "+ Ready";
+    log.value = "++ Ready";
+    setButtons("init");
     $("div#msgPassword").html("Required");
     // setAccNumbers();
 };
 
-// for reference: $('#Button').prop('disabled', true);
+// -----------------------------------------------------------------
+function setButtons(activity) {
+    logger("setButtons, activity: " + activity);
+    // $("div.callMessages").html("Activity: " + activity);
+    switch (activity) {
+        case "init":
+            $('#sendSms').prop('disabled', true);
+            $('#conversation').prop('disabled', true);
+            $('#deleteConversation').prop('disabled', true);
+            $('#listSms').prop('disabled', true);
+            $('#deleteSms').prop('disabled', true);
+            $('#listSenderLogs').prop('disabled', true);
+            $('#deleteSenderLogs').prop('disabled', true);
+            break;
+        case "ready":
+            $('#sendSms').prop('disabled', false);
+            $('#conversation').prop('disabled', false);
+            $('#deleteConversation').prop('disabled', false);
+            $('#listSms').prop('disabled', false);
+            $('#deleteSms').prop('disabled', false);
+            $('#listSenderLogs').prop('disabled', false);
+            $('#deleteSenderLogs').prop('disabled', false);
+            break;
+    }
+}
 
 // -----------------------------------------------------------------------------
