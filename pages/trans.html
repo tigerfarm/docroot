@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style> 
+            div {
+                width: 100px;
+                height: 100px;
+                background: red;
+                -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+                transition: width 2s, height 4s;
+            }
+
+            div:hover {
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+        <style>
+            p {
+                background: #dad;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body>
+
+        <h1>The transition Property</h1>
+
+        <p>Hover over the div element below, to see the transition effect:</p>
+
+        <div id="box"></div>
+
+        <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+        <button>Toggle 'em</button>
+        <p>Hiya</p>
+        <p>Such interesting text, eh?</p>
+        <script>
+            $("button").click(function () {
+                $("box").toggle("slow");
+            });
+        </script>
+
+    </body>
+</html>

@@ -150,8 +150,14 @@ a img {
     position: relative;
     display: inline-block;
 }
+/*
+display: none; 
+display: block; 
+    min-width: 160px;
+*/
 .menuDropdownList {
     display: none;
+    transition-timing-function: ease-in-out;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;

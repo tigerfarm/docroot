@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>toggle demo</title>
+        <style>
+            p {
+                background: #dad;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body>
+        <button>Toggle 'em</button>
+        <p>Hiya</p>
+        <p>Such interesting text, eh?</p>
+        <script>
+            $("button").click(function () {
+                $("p").toggle("slow");
+            });
+        </script>
+    </body>
+</html>
