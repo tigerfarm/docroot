@@ -24,62 +24,6 @@ function runPhpProgram(theProgramName, theParameters, response) {
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-// tigchat
-
-var ACCOUNT_SID = process.env.ACCOUNT_SID;
-var CHAT_SERVICE_SID = process.env.CHAT_SERVICE_SID;
-var CHAT_API_KEY = process.env.CHAT_API_KEY;
-var CHAT_API_KEY_SECRET = process.env.CHAT_API_KEY_SECRET;
-const TOKEN_METHOD_ENVIRONMENT_VARIABLES = 'ENV';
-
-function sayMessage(message) {
-    console.log(message);
-}
-function debugMessage(message) {
-    console.log(message);
-}
-function generateToken(theIdentity) {
-    // Documentation: https://www.twilio.com/docs/api/rest/access-tokens
-    //
-    if (theIdentity === "") {
-        sayRequirement("Required: user identity for creating a chat token.");
-        doPrompt();
-        return "";
-    }
-    sayMessage("+ Generate token, chat user ID: " + theIdentity);
-    const AccessToken = require('twilio').jwt.AccessToken;
-    // Create a Chat token: https://www.twilio.com/docs/chat/create-tokens
-    const token = new AccessToken(
-            ACCOUNT_SID,
-            CHAT_API_KEY,
-            CHAT_API_KEY_SECRET
-            );
-    // Create a Chat service: https://www.twilio.com/console/chat/services
-    const chatGrant = new AccessToken.ChatGrant({
-        serviceSid: CHAT_SERVICE_SID        // Begins with 'IS'
-    });
-    token.addGrant(chatGrant);
-    token.identity = theIdentity;
-    token.ttl = 1200;          // Token time to live, in seconds. 1200 = 20 minutes.
-    //
-    // Output the token.
-    theToken = token.toJwt();
-    debugMessage("+ theToken " + theToken);
-    TOKEN_METHOD = TOKEN_METHOD_ENVIRONMENT_VARIABLES;
-    return(theToken);
-}
-
-app.get('/tigchat/docroot/generateToken', function (req, res) {
-    sayMessage("+ Generate Chat Token.");
-    if (!req.query.identity) {
-        sayMessage("- Parameter required: identity.");
-        res.send(0);
-    }
-    res.send(generateToken(req.query.identity));
-});
-
-// -----------------------------------------------------------------------------
-// -----------------------------------------------------------------------------
 // tigsms
 
 app.get('/tigsms/sendSms.php', function (request, response) {
@@ -138,19 +82,23 @@ app.get('/tigsms/accountNumberList.php', function (request, response) {
 // -----------------------------------------------------------------------------
 // tigcall
 
-app.get('/tigcall/generateToken.php', function (req, response) {
-    runPhpProgram(
-            '/tigcall/generateToken.php',
-            " " + req.query.clientid + " " + req.query.tokenpassword,
+app.get('/tigcall/voiceClientCall.php', function (request, response) {
+    runPhpProgram('/tigcall/voiceClientCall.php',
+            " " + request.query.From + " " + request.query.To,
             response);
     return;
 });
-
+app.get('/tigcall/generateToken.php', function (request, response) {
+    runPhpProgram(
+            '/tigcall/generateToken.php',
+            " " + request.query.clientid + " " + request.query.tokenpassword,
+            response);
+    return;
+});
 app.get('/tigcall/accountNumberList.php', function (request, response) {
     runPhpProgram('/tigcall/accountNumberList.php', request.query.tokenpassword, response);
     return;
 });
-
 app.get('/tigcall/accountPhoneNumbers.php', function (request, response) {
     runPhpProgram('/tigcall/accountPhoneNumbers.php', request.query.tokenpassword, response);
     return;
@@ -229,6 +177,62 @@ function retrieveUpdateDocument(response) {
         // callback("- " + error);
     });
 }
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// tigchat
+
+var ACCOUNT_SID = process.env.ACCOUNT_SID;
+var CHAT_SERVICE_SID = process.env.CHAT_SERVICE_SID;
+var CHAT_API_KEY = process.env.CHAT_API_KEY;
+var CHAT_API_KEY_SECRET = process.env.CHAT_API_KEY_SECRET;
+const TOKEN_METHOD_ENVIRONMENT_VARIABLES = 'ENV';
+
+function sayMessage(message) {
+    console.log(message);
+}
+function debugMessage(message) {
+    console.log(message);
+}
+function generateToken(theIdentity) {
+    // Documentation: https://www.twilio.com/docs/api/rest/access-tokens
+    //
+    if (theIdentity === "") {
+        sayRequirement("Required: user identity for creating a chat token.");
+        doPrompt();
+        return "";
+    }
+    sayMessage("+ Generate token, chat user ID: " + theIdentity);
+    const AccessToken = require('twilio').jwt.AccessToken;
+    // Create a Chat token: https://www.twilio.com/docs/chat/create-tokens
+    const token = new AccessToken(
+            ACCOUNT_SID,
+            CHAT_API_KEY,
+            CHAT_API_KEY_SECRET
+            );
+    // Create a Chat service: https://www.twilio.com/console/chat/services
+    const chatGrant = new AccessToken.ChatGrant({
+        serviceSid: CHAT_SERVICE_SID        // Begins with 'IS'
+    });
+    token.addGrant(chatGrant);
+    token.identity = theIdentity;
+    token.ttl = 1200;          // Token time to live, in seconds. 1200 = 20 minutes.
+    //
+    // Output the token.
+    theToken = token.toJwt();
+    debugMessage("+ theToken " + theToken);
+    TOKEN_METHOD = TOKEN_METHOD_ENVIRONMENT_VARIABLES;
+    return(theToken);
+}
+
+app.get('/tigchat/docroot/generateToken', function (req, res) {
+    sayMessage("+ Generate Chat Token.");
+    if (!req.query.identity) {
+        sayMessage("- Parameter required: identity.");
+        res.send(0);
+    }
+    res.send(generateToken(req.query.identity));
+});
 
 // -----------------------------------------------------------------------------
 //  REST API to manage a document.
