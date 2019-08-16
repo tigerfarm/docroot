@@ -24,7 +24,7 @@ if ($token_password !== $tokenPassword) {
     return;
 }
 // echo "+ tokenIdentity: " . $tokenIdentity . ", tokenPassword: " . $tokenPassword . "\n";
-require __DIR__ . '/twilio-php-master/Twilio/autoload.php';
+require __DIR__ . '/../twilio-php-master/Twilio/autoload.php';
 use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\VoiceGrant;
 // Required for all Twilio access tokens
@@ -34,13 +34,16 @@ $twilioApiSecret = getenv('API_KEY_SECRET');
 $outgoingApplicationSid = getenv('VOICE_TWIML_APP_SID_CALL_CLIENT');
 // Create access token, which we will serialize and sent to the client
 // Token time to live (ttl):
+//      360 seconds = 6 minutes (for testing)
 //      3600 seconds = 60 minutes (1 hour)
 //      36000 seconds = 600 hours
 $token = new AccessToken(
     $twilioAccountSid,
     $twilioApiKey,
     $twilioApiSecret,
-    36000,
+    3600,
+    // 3600,
+    // 36000,
     $tokenIdentity
 );
 $voiceGrant = new VoiceGrant();
