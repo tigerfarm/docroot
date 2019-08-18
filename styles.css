@@ -293,7 +293,8 @@ h6, h6 a {
 }
 .tfpPhotoSmall {
     border:3px solid #B76418;
-    padding:3px;    
+    padding:3px;
+    margin-bottom:6px;
 }
 /* -------------------------------------------------------------------------- */
 .panelTitle
