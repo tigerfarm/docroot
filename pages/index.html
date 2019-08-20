@@ -7,22 +7,53 @@
         <link href="/styles.css" rel="stylesheet" type="text/css"/>
         <script src="/page.js"></script>
         <script>
-            slide1counter = 2;
-            function showPrevious() {
-                logger("Clicked: showPrevious()");
-                if (slide1counter > 2) {
-                    slide1counter --;
-                }                
-                slideName = "cubes/2drawSquares" + slide1counter + ".jpg";
-                document.getElementById("slideShow1").src = slideName; 
+            // -----------------------------------------------------------------
+            slide2counter = 2;
+            function showFirst2() {
+                logger("Clicked: showFirst2()");
+                slide2counter = 2;
+                slideName = "cubes/2drawSquares" + slide2counter + ".jpg";
+                document.getElementById("slideShow2").src = slideName; 
             }
-            function showNext() {
-                logger("Clicked: showNext()");
-                if (slide1counter < 15) {
-                    slide1counter ++;
+            function showNext2() {
+                logger("Clicked: showNext2()");
+                if (slide2counter < 15) {
+                    slide2counter ++;
                 }                
-                slideName = "cubes/2drawSquares" + slide1counter + ".jpg";
-                document.getElementById("slideShow1").src = slideName; 
+                slideName = "cubes/2drawSquares" + slide2counter + ".jpg";
+                document.getElementById("slideShow2").src = slideName; 
+            }
+            function showPrevious2() {
+                logger("Clicked: showPrevious2()");
+                if (slide2counter > 2) {
+                    slide2counter --;
+                }                
+                slideName = "cubes/2drawSquares" + slide2counter + ".jpg";
+                document.getElementById("slideShow2").src = slideName; 
+            }
+            // -----------------------------------------------------------------
+            slide3counter = 2;
+            function showFirst3() {
+                logger("Clicked: showFirst3()");
+                slide3counter = 2;
+                slideName = "cubes/3drawCubes" + slide2counter + ".jpg";
+                document.getElementById("slideShow3").src = slideName; 
+            }
+            function showPrevious3() {
+                logger("Clicked: showPrevious3()");
+                if (slide3counter > 2) {
+                    slide3counter --;
+                }                
+                slideName = "cubes/3drawCubes" + slide3counter + ".jpg";
+                document.getElementById("slideShow3").src = slideName; 
+            }
+            function showNext3() {
+                logger("Clicked: showNext3()");
+                if (slide3counter < 38) {
+                    slide3counter ++;
+                }                
+                slideName = "cubes/3drawCubes" + slide3counter + ".jpg";
+                document.getElementById("slideShow3").src = slideName; 
             }
         </script>
     </head>
@@ -73,32 +104,49 @@
                     Once you have master those, it only takes two instructional steps to draw a four dimensional cube.
                 </p>
                 <p>
-                    1. The first technique is how to draw squares.
-                    Or to be more precise, how to draw each square side of cube.
+                    1. The first technique is the drawing of squares.
+                    Or to be more precise, the drawing of each square side of a cube.
                     The reason this is important is because all sides of a cube are square.
+                    This needs to be second nature when you go onto dimensions higher than 3.
                 </p>
                 <p>
-                    Let me highlight that,
+                    2. The second technique is drawing dimensional baselines.
+                    <br/>Sorry, you can't Google "dimensional baselines" to find the method. However, I will show you.                    
                 </p>
+                <p>
+                    Key points when drawing a square,
+                </p>
+                <p><i>&nbsp;&nbsp;&nbsp;Start by drawing the dimensional baselines.</i></p>
+                <p><i>&nbsp;&nbsp;&nbsp;Opposite sides of a square are parallel to each other.</i></p>
+                <p>
+                    <a onclick="showFirst2();">First</a> ---
+                    <a onclick="showPrevious2();">Previous</a> --- <a onclick="showNext2();">Next</a>
+                    <br/><img id="slideShow2" src="cubes/2drawSquares2.jpg" style="width:500px;" alt="Draw Squares">
+                </p>
+                <p>
+                    Key points when drawing a cube,
+                </p>
+                <p><i>&nbsp;&nbsp;&nbsp;Start by drawing the dimensional baselines.</i></p>
                 <p><i>&nbsp;&nbsp;&nbsp;All sides of a cube are square.</i></p>
                 <p>
-                    Yes, that's obvious, and yes, that was part of your basic geometry studies,
-                    but it needs to be second nature when you go onto dimensions higher than 3.
+                    <a onclick="showFirst3();">First</a> ---
+                    <a onclick="showPrevious3();">Previous</a> --- <a onclick="showNext3();">Next</a>
+                    <br/><img id="slideShow3" src="cubes/3drawCubes2.jpg" style="width:500px;" alt="Draw Cubes">
                 </p>
                 <p>
-                    <a onclick="showPrevious();">Previous</a> --- <a onclick="showNext();">Next</a>
-                    <br/><img id="slideShow1" src="cubes/2drawSquares2.jpg" style="width:500px;">
+                    Key points when drawing dimensional baselines,
                 </p>
+                <p><i>&nbsp;&nbsp;&nbsp;The number of baselines is the number dimensions.</i></p>
+                <p><i>&nbsp;&nbsp;&nbsp;The baselines are guidelines to draw the rest of the cube or square.</i></p>
                 <p>
-                    ...
+                    To do: sequence of drawing a square and cube from dimensional baselines.
+                    <br/>...
                 </p>
-                <p>
-                    2. The second technique you need, is how to draw dimensional baselines.
-                    Sorry, you can't Google "dimensional baselines" to find the method. However, I will show you.                    
-                </p>
-                <p>
-                    ...
-                </p>
+                <!-- p>
+                    <a onclick="showFirst3b();">First</a> ---
+                    <a onclick="showPrevious3b();">Previous</a> --- <a onclick="showNext3b();">Next</a>
+                    <br/><img id="slideShow3b" src="cubes/2drawSquares2.jpg" style="width:500px;" alt="Draw dimensional baselines">
+                </p -->
 
                 <!-- ======================================================= -->
                 <hr>
@@ -121,7 +169,8 @@
                     when all you've ever drawn in your life time, is at most, 3 dimensions.
                 </p>
                 <p>
-                    ...
+                    To do: sequence of drawing an Einstein cube from 4 dimensional baselines.
+                    <br/>...
                 </p>
 
 
