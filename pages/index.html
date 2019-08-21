@@ -55,6 +55,55 @@
                 slideName = "cubes/3drawCubes" + slide3counter + ".jpg";
                 document.getElementById("slideShow3").src = slideName; 
             }
+            // -----------------------------------------------------------------
+            slide3bcounter = 2;
+            function showFirst3b() {
+                logger("Clicked: showFirst3b()");
+                slide3bcounter = 1;
+                slideName = "cubes/3drawDb" + slide3bcounter + ".jpg";
+                document.getElementById("slideShow3b").src = slideName; 
+            }
+            function showPrevious3b() {
+                logger("Clicked: showPrevious3b()");
+                if (slide3bcounter > 1) {
+                    slide3bcounter --;
+                }                
+                slideName = "cubes/3drawDb" + slide3bcounter + ".jpg";
+                document.getElementById("slideShow3b").src = slideName; 
+            }
+            function showNext3b() {
+                logger("Clicked: showNext3b()");
+                if (slide3bcounter < 10) {
+                    slide3bcounter ++;
+                }                
+                slideName = "cubes/3drawDb" + slide3bcounter + ".jpg";
+                document.getElementById("slideShow3b").src = slideName; 
+            }
+            // -----------------------------------------------------------------
+            slide4counter = 2;
+            function showFirst4() {
+                logger("Clicked: showFirst4()");
+                slide4counter = 1;
+                slideName = "cubes/4drawEcube" + slide4counter + ".jpg";
+                document.getElementById("slideShow4").src = slideName; 
+            }
+            function showPrevious4() {
+                logger("Clicked: showPrevious4()");
+                if (slide4counter > 2) {
+                    slide4counter --;
+                }                
+                slideName = "cubes/4drawEcube" + slide4counter + ".jpg";
+                document.getElementById("slideShow4").src = slideName; 
+            }
+            function showNext4() {
+                logger("Clicked: showNext4()");
+                if (slide4counter < 22) {
+                    slide4counter ++;
+                }                
+                slideName = "cubes/4drawEcube" + slide4counter + ".jpg";
+                document.getElementById("slideShow4").src = slideName; 
+            }
+            // 4drawEcube1
         </script>
     </head>
     <body>
@@ -143,16 +192,10 @@
                 <p><i>&nbsp;&nbsp;&nbsp;The quantity of baselines is the same quantity of dimensions.</i></p>
                 <p><i>&nbsp;&nbsp;&nbsp;The baselines are guidelines to draw the rest of the cube or square.</i></p>
                 <p>
-                    To do: sequence of drawing a square and cube from dimensional baselines:
-                    <br/>+ Draw the baselines for a line, square, and cube.
-                    <br/>+ Use the baselines guidelines to draw the rest of the square and cube.
-                    <br/>+ Show the sequence from 1 baseline to 3 baselines.
-                </p>
-                <!-- p>
                     <a onclick="showFirst3b();">First</a> ---
                     <a onclick="showPrevious3b();">Previous</a> --- <a onclick="showNext3b();">Next</a>
-                    <br/><img id="slideShow3b" src="cubes/2drawSquares2.jpg" style="width:500px;" alt="Draw dimensional baselines">
-                </p -->
+                    <br/><img id="slideShow3b" src="cubes/3drawDb1.jpg" style="width:500px;" alt="Draw dimensional baselines">
+                </p>
 
                 <!-- ======================================================= -->
                 <hr>
@@ -173,8 +216,9 @@
                     when all you've ever drawn in your life time, is at most, 3 dimensions.
                 </p>
                 <p>
-                    To do: sequence of drawing an Einstein cube from 4 dimensional baselines.
-                    <br/>...
+                    <a onclick="showFirst4();">First</a> ---
+                    <a onclick="showPrevious4();">Previous</a> --- <a onclick="showNext4();">Next</a>
+                    <br/><img id="slideShow4" src="cubes/4drawEcube2.jpg" style="width:500px;" alt="Draw dimensional baselines">
                 </p>
 
 
