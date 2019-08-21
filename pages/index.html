@@ -56,7 +56,7 @@
                 document.getElementById("slideShow3").src = slideName; 
             }
             // -----------------------------------------------------------------
-            slide3bcounter = 2;
+            slide3bcounter = 1;
             function showFirst3b() {
                 logger("Clicked: showFirst3b()");
                 slide3bcounter = 1;
@@ -80,7 +80,7 @@
                 document.getElementById("slideShow3b").src = slideName; 
             }
             // -----------------------------------------------------------------
-            slide4counter = 2;
+            slide4counter = 1;
             function showFirst4() {
                 logger("Clicked: showFirst4()");
                 slide4counter = 1;
@@ -89,7 +89,7 @@
             }
             function showPrevious4() {
                 logger("Clicked: showPrevious4()");
-                if (slide4counter > 2) {
+                if (slide4counter > 1) {
                     slide4counter --;
                 }                
                 slideName = "cubes/4drawEcube" + slide4counter + ".jpg";
@@ -97,7 +97,7 @@
             }
             function showNext4() {
                 logger("Clicked: showNext4()");
-                if (slide4counter < 22) {
+                if (slide4counter < 54) {
                     slide4counter ++;
                 }                
                 slideName = "cubes/4drawEcube" + slide4counter + ".jpg";
@@ -218,7 +218,7 @@
                 <p>
                     <a onclick="showFirst4();">First</a> ---
                     <a onclick="showPrevious4();">Previous</a> --- <a onclick="showNext4();">Next</a>
-                    <br/><img id="slideShow4" src="cubes/4drawEcube2.jpg" style="width:500px;" alt="Draw dimensional baselines">
+                    <br/><img id="slideShow4" src="cubes/4drawEcube1.jpg" style="width:500px;" alt="Draw dimensional baselines">
                 </p>
 
 
