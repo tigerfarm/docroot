@@ -8,100 +8,144 @@
         <script src="/page.js"></script>
         <script>
             // -----------------------------------------------------------------
+            var cursorX = 0;
+            var cursorY = 0;
+            document.onmousemove = function (e) {
+                cursorX = e.pageX;
+                cursorY = e.pageY;
+            }
+            // -----------------------------------------------------------------
             slide2counter = 2;
+            function imageClick2() {
+                var imageOffsetLeft = document.getElementById('slideShow2').offsetLeft;
+                imageClickOffset = cursorX - imageOffsetLeft;
+                // logger("Clicked: imageClick2(), cursorX = " + cursorX + ", imageClickOffset = " + imageClickOffset);
+                if (imageClickOffset < 300) {
+                    showPrevious2();
+                } else if (imageClickOffset > 500) {
+                    showNext2();
+                }
+            }
             function showFirst2() {
                 logger("Clicked: showFirst2()");
                 slide2counter = 2;
                 slideName = "cubes/2drawSquares" + slide2counter + ".jpg";
-                document.getElementById("slideShow2").src = slideName; 
+                document.getElementById("slideShow2").src = slideName;
             }
             function showNext2() {
                 logger("Clicked: showNext2()");
                 if (slide2counter < 15) {
-                    slide2counter ++;
-                }                
+                    slide2counter++;
+                }
                 slideName = "cubes/2drawSquares" + slide2counter + ".jpg";
-                document.getElementById("slideShow2").src = slideName; 
+                document.getElementById("slideShow2").src = slideName;
             }
             function showPrevious2() {
                 logger("Clicked: showPrevious2()");
                 if (slide2counter > 2) {
-                    slide2counter --;
-                }                
+                    slide2counter--;
+                }
                 slideName = "cubes/2drawSquares" + slide2counter + ".jpg";
-                document.getElementById("slideShow2").src = slideName; 
+                document.getElementById("slideShow2").src = slideName;
             }
             // -----------------------------------------------------------------
             slide3counter = 2;
+            function imageClick3() {
+                var imageOffsetLeft = document.getElementById('slideShow3').offsetLeft;
+                imageClickOffset = cursorX - imageOffsetLeft;
+                if (imageClickOffset < 300) {
+                    showPrevious3();
+                } else if (imageClickOffset > 500) {
+                    showNext3();
+                }
+            }
             function showFirst3() {
                 logger("Clicked: showFirst3()");
                 slide3counter = 2;
                 slideName = "cubes/3drawCubes" + slide2counter + ".jpg";
-                document.getElementById("slideShow3").src = slideName; 
+                document.getElementById("slideShow3").src = slideName;
             }
             function showPrevious3() {
                 logger("Clicked: showPrevious3()");
                 if (slide3counter > 2) {
-                    slide3counter --;
-                }                
+                    slide3counter--;
+                }
                 slideName = "cubes/3drawCubes" + slide3counter + ".jpg";
-                document.getElementById("slideShow3").src = slideName; 
+                document.getElementById("slideShow3").src = slideName;
             }
             function showNext3() {
                 logger("Clicked: showNext3()");
                 if (slide3counter < 38) {
-                    slide3counter ++;
-                }                
+                    slide3counter++;
+                }
                 slideName = "cubes/3drawCubes" + slide3counter + ".jpg";
-                document.getElementById("slideShow3").src = slideName; 
+                document.getElementById("slideShow3").src = slideName;
             }
             // -----------------------------------------------------------------
             slide3bcounter = 1;
+            function imageClick3b() {
+                var imageOffsetLeft = document.getElementById('slideShow3b').offsetLeft;
+                imageClickOffset = cursorX - imageOffsetLeft;
+                if (imageClickOffset < 300) {
+                    showPrevious3b();
+                } else if (imageClickOffset > 500) {
+                    showNext3b();
+                }
+            }
             function showFirst3b() {
                 logger("Clicked: showFirst3b()");
                 slide3bcounter = 1;
                 slideName = "cubes/3drawDb" + slide3bcounter + ".jpg";
-                document.getElementById("slideShow3b").src = slideName; 
+                document.getElementById("slideShow3b").src = slideName;
             }
             function showPrevious3b() {
                 logger("Clicked: showPrevious3b()");
                 if (slide3bcounter > 1) {
-                    slide3bcounter --;
-                }                
+                    slide3bcounter--;
+                }
                 slideName = "cubes/3drawDb" + slide3bcounter + ".jpg";
-                document.getElementById("slideShow3b").src = slideName; 
+                document.getElementById("slideShow3b").src = slideName;
             }
             function showNext3b() {
                 logger("Clicked: showNext3b()");
                 if (slide3bcounter < 10) {
-                    slide3bcounter ++;
-                }                
+                    slide3bcounter++;
+                }
                 slideName = "cubes/3drawDb" + slide3bcounter + ".jpg";
-                document.getElementById("slideShow3b").src = slideName; 
+                document.getElementById("slideShow3b").src = slideName;
             }
             // -----------------------------------------------------------------
             slide4counter = 1;
+            function imageClick4() {
+                var imageOffsetLeft = document.getElementById('slideShow4').offsetLeft;
+                imageClickOffset = cursorX - imageOffsetLeft;
+                if (imageClickOffset < 300) {
+                    showPrevious4();
+                } else if (imageClickOffset > 500) {
+                    showNext4();
+                }
+            }
             function showFirst4() {
                 logger("Clicked: showFirst4()");
                 slide4counter = 1;
                 slideName = "cubes/4drawEcube" + slide4counter + ".jpg";
-                document.getElementById("slideShow4").src = slideName; 
+                document.getElementById("slideShow4").src = slideName;
             }
             function showPrevious4() {
                 logger("Clicked: showPrevious4()");
                 if (slide4counter > 1) {
-                    slide4counter --;
-                }                
+                    slide4counter--;
+                }
                 slideName = "cubes/4drawEcube" + slide4counter + ".jpg";
-                document.getElementById("slideShow4").src = slideName; 
+                document.getElementById("slideShow4").src = slideName;
             }
             function showNext4() {
                 logger("Clicked: showNext4()");
                 if (slide4counter < 54) {
-                    slide4counter ++;
-                }                
+                    slide4counter++;
+                }
                 slideName = "cubes/4drawEcube" + slide4counter + ".jpg";
-                document.getElementById("slideShow4").src = slideName; 
+                document.getElementById("slideShow4").src = slideName;
             }
             // 4drawEcube1
         </script>
@@ -172,8 +216,9 @@
                 <p>
                     <a onclick="showFirst2();">First</a> ---
                     <a onclick="showPrevious2();">Previous</a> --- <a onclick="showNext2();">Next</a>
-                    <br/><img id="slideShow2" src="cubes/2drawSquares2.jpg" style="width:500px;" alt="Draw Squares">
+                    <img id="slideShow2" onclick="imageClick2();" src="cubes/2drawSquares2.jpg" style="width:800px;" alt="Draw Squares">
                 </p>
+
                 <h3>Draw a Cube</h3>
                 <p>
                     Key points when drawing a cube,
@@ -183,7 +228,7 @@
                 <p>
                     <a onclick="showFirst3();">First</a> ---
                     <a onclick="showPrevious3();">Previous</a> --- <a onclick="showNext3();">Next</a>
-                    <br/><img id="slideShow3" src="cubes/3drawCubes2.jpg" style="width:500px;" alt="Draw Cubes">
+                    <br/><img id="slideShow3" onclick="imageClick3();" src="cubes/3drawCubes2.jpg" style="width:800px;" alt="Draw Cubes">
                 </p>
                 <h3>Draw Dimensional Baselines</h3>
                 <p>
@@ -194,7 +239,7 @@
                 <p>
                     <a onclick="showFirst3b();">First</a> ---
                     <a onclick="showPrevious3b();">Previous</a> --- <a onclick="showNext3b();">Next</a>
-                    <br/><img id="slideShow3b" src="cubes/3drawDb1.jpg" style="width:500px;" alt="Draw dimensional baselines">
+                    <br/><img id="slideShow3b" onclick="imageClick3b();" src="cubes/3drawDb1.jpg" style="width:800px;" alt="Draw dimensional baselines">
                 </p>
 
                 <!-- ======================================================= -->
@@ -218,7 +263,7 @@
                 <p>
                     <a onclick="showFirst4();">First</a> ---
                     <a onclick="showPrevious4();">Previous</a> --- <a onclick="showNext4();">Next</a>
-                    <br/><img id="slideShow4" src="cubes/4drawEcube1.jpg" style="width:500px;" alt="Draw dimensional baselines">
+                    <br/><img id="slideShow4" onclick="imageClick4();" src="cubes/4drawEcube1.jpg" style="width:800px;" alt="Draw dimensional baselines">
                 </p>
 
 
