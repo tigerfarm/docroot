@@ -8,21 +8,28 @@
         <script src="/page.js"></script>
         <script>
             // -----------------------------------------------------------------
+            // Left  side image click, previous slide.
+            // Right side image click, next slide.
+            imageWidth = 800;
+            imageClickOffsetMaxLeft = 300;
+            imageClickOffsetMinRight = 500;
+            //
             var cursorX = 0;
-            var cursorY = 0;
+            // var cursorY = 0;
             document.onmousemove = function (e) {
                 cursorX = e.pageX;
-                cursorY = e.pageY;
+                // cursorY = e.pageY;
             }
+            
             // -----------------------------------------------------------------
             slide2counter = 2;
             function imageClick2() {
                 var imageOffsetLeft = document.getElementById('slideShow2').offsetLeft;
                 imageClickOffset = cursorX - imageOffsetLeft;
                 // logger("Clicked: imageClick2(), cursorX = " + cursorX + ", imageClickOffset = " + imageClickOffset);
-                if (imageClickOffset < 300) {
+                if (imageClickOffset < imageClickOffsetMaxLeft) {
                     showPrevious2();
-                } else if (imageClickOffset > 500) {
+                } else if (imageClickOffset > imageClickOffsetMinRight) {
                     showNext2();
                 }
             }
@@ -53,9 +60,9 @@
             function imageClick3() {
                 var imageOffsetLeft = document.getElementById('slideShow3').offsetLeft;
                 imageClickOffset = cursorX - imageOffsetLeft;
-                if (imageClickOffset < 300) {
+                if (imageClickOffset < imageClickOffsetMaxLeft) {
                     showPrevious3();
-                } else if (imageClickOffset > 500) {
+                } else if (imageClickOffset > imageClickOffsetMinRight) {
                     showNext3();
                 }
             }
@@ -86,9 +93,9 @@
             function imageClick3b() {
                 var imageOffsetLeft = document.getElementById('slideShow3b').offsetLeft;
                 imageClickOffset = cursorX - imageOffsetLeft;
-                if (imageClickOffset < 300) {
+                if (imageClickOffset < imageClickOffsetMaxLeft) {
                     showPrevious3b();
-                } else if (imageClickOffset > 500) {
+                } else if (imageClickOffset > imageClickOffsetMinRight) {
                     showNext3b();
                 }
             }
@@ -119,9 +126,9 @@
             function imageClick4() {
                 var imageOffsetLeft = document.getElementById('slideShow4').offsetLeft;
                 imageClickOffset = cursorX - imageOffsetLeft;
-                if (imageClickOffset < 300) {
+                if (imageClickOffset < imageClickOffsetMaxLeft) {
                     showPrevious4();
-                } else if (imageClickOffset > 500) {
+                } else if (imageClickOffset > imageClickOffsetMinRight) {
                     showNext4();
                 }
             }
