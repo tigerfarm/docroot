@@ -25,6 +25,19 @@ function runPhpProgram(theProgramName, theParameters, response) {
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
+// cgi programs
+
+app.get('/echo', function (request, response) {
+    console.log('+ Echo query: ' + JSON.stringify(request.query));
+    runPhpProgram(
+            '/cgi/echo.php',
+            " '" + JSON.stringify(request.query) + "'",
+            response);
+    return;
+});
+ 
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // tigsms
 
 app.get('/tigsms/sendSms.php', function (request, response) {
