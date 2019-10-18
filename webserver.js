@@ -7,6 +7,10 @@ var path = require("path");
 const express = require('express');
 var app = express();
 
+// $ npm install --save request
+const request = require('request');
+const url = require("url");
+
 // -----------------------------------------------------------------------------
 function runPhpProgram(theProgramName, theParameters, response) {
     // const theProgram = '/app/.heroku/php/bin/php ' + path.join(process.cwd(), theProgramName) + " " + theParameters;
@@ -35,7 +39,30 @@ app.get('/echo', function (request, response) {
             response);
     return;
 });
- 
+
+app.get('/timenow', function (request, response) {
+    console.log('+ Echo query: ' + JSON.stringify(request.query));
+    runPhpProgram(
+            '/cgi/timenow.php',
+            " '" + JSON.stringify(request.query) + "'",
+            response);
+    return;
+});
+
+app.get('*', function (request, response, next) {
+    // Run PHP CGI programs
+    theUrl = url.parse(request.url).pathname;
+    console.log('+ Echo theUrl: ' + theUrl + ' query: ' + JSON.stringify(request.query));
+    if (theUrl.startsWith("/cgi/")) {
+    runPhpProgram(
+            theUrl,
+            " '" + JSON.stringify(request.query) + "'",
+            response);
+        return;
+    }
+    next();
+});
+// 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 // tigsms
