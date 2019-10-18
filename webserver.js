@@ -11,6 +11,7 @@ var app = express();
 const request = require('request');
 const url = require("url");
 
+var theUrl = '';
 // -----------------------------------------------------------------------------
 function runPhpProgram(theProgramName, theParameters, response) {
     // const theProgram = '/app/.heroku/php/bin/php ' + path.join(process.cwd(), theProgramName) + " " + theParameters;
@@ -53,11 +54,15 @@ app.get('*', function (request, response, next) {
     // Run PHP CGI programs
     theUrl = url.parse(request.url).pathname;
     console.log('+ Echo theUrl: ' + theUrl + ' query: ' + JSON.stringify(request.query));
+    if (theUrl.endsWith(".txt")) {
+        // Doesn't seem to work.
+        response.set('Content-Type', 'text/plain');
+    }
     if (theUrl.startsWith("/cgi/")) {
-    runPhpProgram(
-            theUrl,
-            " '" + JSON.stringify(request.query) + "'",
-            response);
+        runPhpProgram(
+                theUrl,
+                " '" + JSON.stringify(request.query) + "'",
+                response);
         return;
     }
     next();
