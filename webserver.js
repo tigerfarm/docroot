@@ -42,6 +42,7 @@ app.get('/echo', function (request, response) {
     return;
 });
 
+app.use(express.urlencoded());
 app.post('/echo', function (request, response) {
     console.log("+ GET headers: " + JSON.stringify(request.headers));
     console.log('+ Echo query: ' + JSON.stringify(request.query));
