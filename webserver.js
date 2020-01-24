@@ -45,7 +45,7 @@ app.get('/echo', function (request, response) {
 app.post('/echo', function (request, response) {
     console.log("+ GET headers: " + JSON.stringify(request.headers));
     console.log('+ Echo query: ' + JSON.stringify(request.query));
-    console.log("+ POST body: " + JSON.stringify(req.body));
+    console.log("+ POST body: " + JSON.stringify(request.body));
     runPhpProgram(
             '/cgi/echo.php',
             " '" + JSON.stringify(request.query) + "'",
