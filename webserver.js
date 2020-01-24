@@ -34,6 +34,7 @@ function runPhpProgram(theProgramName, theParameters, response) {
 
 app.get('/echo', function (request, response) {
     console.log('+ Echo query: ' + JSON.stringify(request.query));
+    console.log("+ GET headers: " + JSON.stringify(request.headers));
     runPhpProgram(
             '/cgi/echo.php',
             " '" + JSON.stringify(request.query) + "'",
