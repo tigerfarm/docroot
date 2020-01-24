@@ -12,6 +12,8 @@ $ git commit -am "updates"
 $ git push -u origin master
 
 git push heroku master
+
+heroku logs --tail
 ````
 
 Cheers...

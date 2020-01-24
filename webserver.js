@@ -33,8 +33,19 @@ function runPhpProgram(theProgramName, theParameters, response) {
 // cgi programs
 
 app.get('/echo', function (request, response) {
-    console.log('+ Echo query: ' + JSON.stringify(request.query));
     console.log("+ GET headers: " + JSON.stringify(request.headers));
+    console.log('+ Echo query: ' + JSON.stringify(request.query));
+    runPhpProgram(
+            '/cgi/echo.php',
+            " '" + JSON.stringify(request.query) + "'",
+            response);
+    return;
+});
+
+app.post('/echo', function (request, response) {
+    console.log("+ GET headers: " + JSON.stringify(request.headers));
+    console.log('+ Echo query: ' + JSON.stringify(request.query));
+    console.log("+ POST body: " + JSON.stringify(req.body));
     runPhpProgram(
             '/cgi/echo.php',
             " '" + JSON.stringify(request.query) + "'",
