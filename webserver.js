@@ -60,9 +60,6 @@ app.get('/echo', function (request, response) {
 + theResponse: +++ Echo POST data.
 + URL: /app/cgi/echo.php {}
 + End of list.
-
-exec error: Error: Command failed: php /app/cgi/echo.php NaN{"ToCountry":"US"...,"ApiVersion":"2010-04-01"}'
-
  */
 app.use(express.urlencoded());
 app.post('/echo', function (request, response) {
