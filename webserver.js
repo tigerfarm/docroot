@@ -61,7 +61,7 @@ app.get('/echo', function (request, response) {
 + URL: /app/cgi/echo.php {}
 + End of list.
 
-exec error: Error: Command failed: php /app/cgi/echo.php NaN{"ToCountry":"US","ToState":"CA","SmsMessageSid":"SMba8d3c33a33bc11eaf89cbcf6233c7ed","NumMedia":"0","ToCity":"SAN BRUNO","FromZip":"94030","SmsSid":"SMba8d3c33a33bc11eaf89cbcf6233c7ed","FromState":"CA","SmsStatus":"received","FromCity":"SAN BRUNO","Body":"okay 8","FromCountry":"US","To":"+16508668221","MessagingServiceSid":"MG44e9e310ae478d5635bc11685758da4a","ToZip":"94030","NumSegments":"1","MessageSid":"SMba8d3c33a33bc11eaf89cbcf6233c7ed","AccountSid":"ACae0e356ccba96d16d8d4f6f9518684a3","From":"+16508661007","ApiVersion":"2010-04-01"}'
+exec error: Error: Command failed: php /app/cgi/echo.php NaN{"ToCountry":"US"...,"ApiVersion":"2010-04-01"}'
 
  */
 app.use(express.urlencoded());
@@ -71,7 +71,7 @@ app.post('/echo', function (request, response) {
     console.log("+ POST body: " + JSON.stringify(request.body));
     runPhpProgram(
             '/cgi/echo.php',
-            + " '" + JSON.stringify(request.body) + "'",
+            " '" + JSON.stringify(request.body) + "'",
             response);
     return;
 });
