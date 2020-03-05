@@ -32,6 +32,15 @@ function runPhpProgram(theProgramName, theParameters, response) {
 // -----------------------------------------------------------------------------
 // cgi programs
 
+/* Echo GET request
+ * ----------------
++ GET headers: {"host":"example.com","connection":"close","x-twilio-signature":"8tzq4M/GCrozVtVL6RWNRcziNdQ=",...}
++ Echo query: {"ToCountry":"US","ToState":"CA","SmsMessageSid":"SM6c94214ed95fb302bd773dae179ffc09","NumMedia":"0","ToCity":"SAN BRUNO","FromZip":"94030","SmsSid":"SM6c94214ed95fb302bd773dae179ffc09","FromState":"CA","SmsStatus":"received","FromCity":"SAN BRUNO","Body":"okay 6","FromCountry":"US","To":"+16505551111","MessagingServiceSid":"MG44e9e310ae478d5635bc11685758da4a","ToZip":"94030","NumSegments":"1","MessageSid":"SM6c94214ed95fb302bd773dae179ffc09","AccountSid":"AC...3","From":"+16508661007","ApiVersion":"2010-04-01"}
++ Run: php /app/cgi/echo.php  '{"ToCountry":"US","ToState":"CA","SmsMessageSid":"SM6c94214ed95fb302bd773dae179ffc09","NumMedia":"0","ToCity":"SAN BRUNO","FromZip":"94030","SmsSid":"SM6c94214ed95fb302bd773dae179ffc09","FromState":"CA","SmsStatus":"received","FromCity":"SAN BRUNO","Body":"okay 6","FromCountry":"US","To":"+16505551111","MessagingServiceSid":"MG44e9e310ae478d5635bc11685758da4a","ToZip":"94030","NumSegments":"1","MessageSid":"SM6c94214ed95fb302bd773dae179ffc09","AccountSid":"ACae0e356ccba96d16d8d4f6f9518684a3","From":"+16505551111","ApiVersion":"2010-04-01"}'
++ theResponse: +++ Echo POST data.
++ URL: /app/cgi/echo.php {"ToCountry":"US","ToState":"CA","SmsMessageSid":"SM6c94214ed95fb302bd773dae179ffc09","NumMedia":"0","ToCity":"SAN BRUNO","FromZip":"94030","SmsSid":"SM6c94214ed95fb302bd773dae179ffc09","FromState":"CA","SmsStatus":"received","FromCity":"SAN BRUNO","Body":"okay 6","FromCountry":"US","To":"+16505551111","MessagingServiceSid":"MG44e9e310ae478d5635bc11685758da4a","ToZip":"94030","NumSegments":"1","MessageSid":"SM6c94214ed95fb302bd773dae179ffc09","AccountSid":"AC...3","From":"+16505551111","ApiVersion":"2010-04-01"}
++ End of list.
+ */
 app.get('/echo', function (request, response) {
     console.log("+ GET headers: " + JSON.stringify(request.headers));
     console.log('+ Echo query: ' + JSON.stringify(request.query));
@@ -42,6 +51,16 @@ app.get('/echo', function (request, response) {
     return;
 });
 
+/* Echo POST request
+ * -----------------
++ GET headers: {"host":"example.com","connection":"close","content-type":"application/x-www-form-urlencoded","x-twilio-signature":"2oCIDYj8cQs9rID2phzp5BTfj8U=",...}
++ Echo query: {}
++ POST body: {"ToCountry":"US","ToState":"CA","SmsMessageSid":"SM90e6972bb60ae8a397eb2bbf69b03258","NumMedia":"0","ToCity":"SAN BRUNO","FromZip":"94030","SmsSid":"SM90e6972bb60ae8a397eb2bbf69b03258","FromState":"CA","SmsStatus":"received","FromCity":"SAN BRUNO","Body":"okay 5","FromCountry":"US","To":"+16505551111","MessagingServiceSid":"MG44e9e310ae478d5635bc11685758da4a","ToZip":"94030","NumSegments":"1","MessageSid":"SM90e6972bb60ae8a397eb2bbf69b03258","AccountSid":"AC...3","From":"+16505551111","ApiVersion":"2010-04-01"}
++ Run: php /app/cgi/echo.php  '{}'
++ theResponse: +++ Echo POST data.
++ URL: /app/cgi/echo.php {}
++ End of list.
+ */
 app.use(express.urlencoded());
 app.post('/echo', function (request, response) {
     console.log("+ GET headers: " + JSON.stringify(request.headers));
@@ -49,11 +68,12 @@ app.post('/echo', function (request, response) {
     console.log("+ POST body: " + JSON.stringify(request.body));
     runPhpProgram(
             '/cgi/echo.php',
-            " '" + JSON.stringify(request.query) + "'",
+            + " '" + JSON.stringify(request.body) + "'",
             response);
     return;
 });
 
+// ------------------------------------------------
 app.get('/timenow', function (request, response) {
     console.log('+ Echo query: ' + JSON.stringify(request.query));
     runPhpProgram(

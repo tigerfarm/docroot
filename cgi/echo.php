@@ -7,6 +7,9 @@ foreach($_POST as $key=>$value){
 }
 echo "+ End of list.\xA";
 
+// +++ Echo POST data.
+// + URL: /app/cgi/echo.php {}
+// + End of list.
 $fp = fopen('cgi/echo.txt', 'w');
 fwrite($fp, '+++ Echo POST data.');
 fwrite($fp, "\xA");
