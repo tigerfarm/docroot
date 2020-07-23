@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "express": "^4.15.2",
-    "request": "6.14.5",
+    "request": "2.88.0",
     "twilio": "^3.37.0",
     "twilio-sync": "^0.11.2"
   },
