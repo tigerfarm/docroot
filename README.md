@@ -28,4 +28,13 @@ $ git push heroku master
 heroku logs --tail
 ````
 
+After making a package change,
+````
+$ npm install
+$ git commit -am "updates"
+$ git push -u origin master
+$ git push heroku master
+
+````
+
 Cheers...
