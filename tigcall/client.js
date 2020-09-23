@@ -207,9 +207,6 @@ function setAccNumbers() {
     logger("+ setAccNumbers");
     // $('#accountNumbers option:selected').val("+16505551111");
     var options = $("#accountNumbers");
-    // $.each(data, function() {
-    //   options.append(new Option(this.text, this.value));
-    // });
     $("div#callMessages").html("+ Please wait, loading phone numbers...");
     $.get("accountNumberList.php?tokenpassword=" + tokenPassword, function (response) {
         logger("+ response :" + response + ":");
@@ -222,6 +219,7 @@ function setAccNumbers() {
         if (response === "0") {
             $("div#msgMsgFrom").html("<b>No account phone numbers.</b>");
             $("div#callMessages").html("<b>- You are required to have at least one account phone numbers.</b>");
+            return;
         }
         arrayNumbers = response.split(":");
         // options.append($("<option />").val(aNumbers[0]).text(aNumbers[0]));
